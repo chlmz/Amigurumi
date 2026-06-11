@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Displacer Beast Amigurumi — Instrucciones Completas</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap');
+  :root {
+    --gray-dark:#2a2a35; --gray-mid:#4a4a5e; --gray-light:#7a7a9a;
+    --pink:#c8869a; --pink-light:#f0d0dc; --cream:#f5f0e8;
+    --blue-eye:#3a7ab8; --black:#111111;
+    --tip:#fff8ee; --tip-b:#c8934a;
+    --warn:#fff0f0; --warn-b:#c0392b;
+    --ok:#f0f7f0; --ok-b:#2e7d32;
+    --note:#f0f0ff; --note-b:#4a4a8e;
+    --special:#f5f0e8; --special-b:#6a5a3a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Lato',sans-serif;font-weight:300;background:#f0f0f5;color:#1a1a2a;line-height:1.8;font-size:16px;}
+  header{background:var(--gray-dark);color:#e0e0f0;padding:48px 24px 36px;text-align:center;border-bottom:5px solid var(--gray-light);}
+  header h1{font-family:'Playfair Display',serif;font-size:2.3rem;margin-bottom:8px;color:#e8e8f8;}
+  header p{color:var(--gray-light);font-size:1rem;}
+  .container{max-width:860px;margin:0 auto;padding:28px 20px 80px;}
+
+  .materials-box{background:var(--gray-dark);color:#e0e0f0;border-radius:12px;padding:28px 32px;margin:32px 0;}
+  .materials-box h2{font-family:'Playfair Display',serif;color:#b0b8d8;font-size:1.2rem;margin-bottom:16px;text-transform:uppercase;letter-spacing:1px;}
+  .materials-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px 24px;}
+  .materials-grid li{list-style:none;padding-left:18px;position:relative;font-size:0.93rem;line-height:1.6;}
+  .materials-grid li::before{content:'▸';color:#b0b8d8;position:absolute;left:0;}
+  .color-dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:middle;border:1px solid rgba(255,255,255,0.2);}
+
+  .abbrev-table{width:100%;border-collapse:collapse;margin:18px 0 32px;font-size:0.92rem;}
+  .abbrev-table th{background:var(--gray-mid);color:#e0e0f0;padding:10px 14px;text-align:left;font-weight:700;font-size:0.82rem;letter-spacing:0.5px;text-transform:uppercase;}
+  .abbrev-table td{padding:9px 14px;border-bottom:1px solid #d8d8e8;vertical-align:top;}
+  .abbrev-table tr:nth-child(even) td{background:#e8e8f0;}
+  .abbrev-table td:first-child{font-weight:700;color:var(--gray-mid);white-space:nowrap;width:130px;}
+
+  .toc{background:white;border:1px solid #c8c8d8;border-radius:10px;padding:22px 28px;margin:28px 0;}
+  .toc h3{font-family:'Playfair Display',serif;color:var(--gray-mid);margin-bottom:12px;font-size:1.1rem;}
+  .toc ol{padding-left:20px;}
+  .toc li{padding:3px 0;font-size:0.92rem;color:var(--gray-mid);}
+  .toc li strong{color:var(--gray-dark);}
+
+  .piece-header{background:var(--gray-mid);color:#e8e8f8;padding:18px 24px;border-radius:10px 10px 0 0;margin-top:48px;}
+  .piece-number{font-size:0.75rem;color:#a0a0c0;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;}
+  .piece-header h2{font-family:'Playfair Display',serif;font-size:1.5rem;}
+  .piece-header .subtitle{font-size:0.88rem;color:#c0c0e0;margin-top:4px;}
+  .piece-body{background:white;border:1px solid #c8c8d8;border-top:none;border-radius:0 0 10px 10px;padding:26px 28px 30px;}
+
+  .intro-p{background:var(--note);border-left:4px solid var(--note-b);border-radius:0 8px 8px 0;padding:13px 17px;margin-bottom:22px;font-size:0.96rem;color:#1a1a3a;font-style:italic;}
+
+  .step{display:flex;gap:14px;margin-bottom:13px;align-items:flex-start;}
+  .step-label{background:var(--gray-light);color:white;font-weight:700;font-size:0.76rem;padding:3px 10px;border-radius:20px;white-space:nowrap;margin-top:3px;min-width:75px;text-align:center;letter-spacing:0.5px;}
+  .step-label.pink{background:var(--pink);}
+  .step-label.black{background:#333;}
+  .step-label.special{background:var(--special-b);}
+  .step-content{flex:1;}
+  .step-content .stitch-line{font-weight:700;color:var(--gray-dark);font-size:0.97rem;}
+  .step-content .explanation{font-size:0.89rem;color:#3a3a5a;margin-top:3px;line-height:1.6;}
+  .stitch-count{display:inline-block;background:var(--gray-dark);color:#e8e8f8;font-size:0.78rem;font-weight:700;padding:1px 8px;border-radius:10px;margin-left:6px;vertical-align:middle;}
+
+  .tip-box{background:var(--tip);border:1px solid var(--tip-b);border-left:4px solid var(--tip-b);border-radius:8px;padding:13px 17px;margin:16px 0;font-size:0.91rem;}
+  .warn-box{background:var(--warn);border:1px solid var(--warn-b);border-left:4px solid var(--warn-b);border-radius:8px;padding:13px 17px;margin:16px 0;font-size:0.91rem;}
+  .note-box{background:var(--ok);border:1px solid var(--ok-b);border-left:4px solid var(--ok-b);border-radius:8px;padding:13px 17px;margin:16px 0;font-size:0.91rem;}
+  .special-box{background:var(--special);border:1px solid var(--special-b);border-left:4px solid var(--special-b);border-radius:8px;padding:13px 17px;margin:16px 0;font-size:0.91rem;}
+  .wire-box{background:#f5f5e0;border:1px solid #b0a020;border-left:4px solid #b0a020;border-radius:8px;padding:13px 17px;margin:16px 0;font-size:0.91rem;}
+  .box-title{font-weight:700;margin-bottom:4px;font-size:0.81rem;text-transform:uppercase;letter-spacing:0.5px;}
+  .tip-box .box-title{color:#6b3a1f;}
+  .warn-box .box-title{color:var(--warn-b);}
+  .note-box .box-title{color:#2e7d32;}
+  .special-box .box-title{color:var(--special-b);}
+  .wire-box .box-title{color:#7a6a00;}
+
+  .sub-section{margin-top:26px;padding-top:18px;border-top:1px solid #d8d8e8;}
+  .sub-section h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gray-mid);margin-bottom:12px;display:flex;align-items:center;gap:10px;}
+  .sub-section h3::after{content:'';flex:1;height:1px;background:#c8c8d8;}
+
+  .assembly-step{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start;}
+  .assembly-number{background:var(--gray-light);color:white;font-weight:700;font-size:1rem;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+  .assembly-content{flex:1;font-size:0.96rem;line-height:1.75;}
+
+  @media(max-width:600px){
+    header h1{font-size:1.7rem;}
+    .materials-grid{grid-template-columns:1fr;}
+    .piece-body{padding:18px 16px 22px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div style="font-size:2.8rem;margin-bottom:10px;">🐆</div>
+  <h1>Displacer Beast Amigurumi</h1>
+  <p>Instrucciones completas paso a paso · Estilo tutorial en video</p>
+  <p style="margin-top:6px;font-size:0.82rem;color:#8080a0;">Diseño original: Sharon Posey · Nivel: Intermedio · Altura: 46cm</p>
+</header>
+
+<div class="container">
+
+  <div class="intro-p" style="margin-top:28px;font-style:normal;font-size:1rem;">
+    ¡Hola! Este es el más grande y complejo de los tres proyectos. El Displacer Beast es una pantera de D&D con 6 patas, cola con alambre y tentáculos en la espalda con cabezas texturizadas. Tiene puntos especiales nuevos — puff, dblpuff y popcorn — que explico en detalle. ¡Tómatelo con calma y disfruta cada pieza!
+  </div>
+
+  <!-- MATERIALES -->
+  <div class="materials-box">
+    <h2>🧶 Lo que necesitas</h2>
+    <ul class="materials-grid">
+      <li><span class="color-dot" style="background:#7a7a8a;"></span><strong>MC</strong> — Gris medio (color principal)</li>
+      <li><span class="color-dot" style="background:#e8c0cc;"></span><strong>Pink</strong> — Rosa (interior de orejas, tentáculos)</li>
+      <li><span class="color-dot" style="background:#f5f0e0;"></span><strong>Cream</strong> — Crema (detalles tentáculos)</li>
+      <li><span class="color-dot" style="background:#111111;"></span><strong>Black</strong> — Negro (nariz)</li>
+      <li>Hilo de peso worsted #4 (acrílico 100%) — 1 madeja MC</li>
+      <li>Pequeñas cantidades de Pink, Cream y Black</li>
+      <li>Aguja de crochet 3.5mm (tamaño E-4 USA)</li>
+      <li>Aguja de tapicería para coser piezas</li>
+      <li>Relleno de fibra (polyester fiberfill)</li>
+      <li>1 par de ojos de seguridad azules de 25mm</li>
+      <li>Alfileres rectos y marcadores de punto</li>
+      <li>Alambre calibre 12 — 70 pulgadas / 178cm total</li>
+      <li>Alicates de punta fina (pliers)</li>
+    </ul>
+  </div>
+
+  <!-- PUNTOS ESPECIALES -->
+  <div class="special-box" style="margin:24px 0;">
+    <div class="box-title">⭐ Puntos especiales — LEE ESTO ANTES DE EMPEZAR</div>
+    <p style="margin-bottom:10px;"><strong>Puff Stitch (puff):</strong> Toma hilo, inserta la aguja y saca un lazo — 5 veces en el mismo punto (quedan 11 lazadas). Toma hilo y saca por TODAS las lazadas de una vez. Haz ch1 para cerrar. Para el siguiente punto encima del puff, trabaja en ese ch1.</p>
+    <p style="margin-bottom:10px;"><strong>Double Puff Stitch (dblpuff):</strong> Toma hilo, inserta en el primer espacio y saca un lazo — 2 veces. Luego toma hilo, inserta en el siguiente espacio y saca un lazo — 3 veces. Luego toma hilo, inserta en el siguiente espacio y saca un lazo — 2 veces más. Toma hilo y saca por TODAS las lazadas. Ch1 para cerrar. Este punto ocupa 3 espacios y al hacerlo estás disminuyendo.</p>
+    <p style="margin-bottom:10px;"><strong>Popcorn Stitch (popcorn):</strong> Haz 5dc en el punto indicado. Saca la aguja del lazo activo, insértala en el PRIMER dc que hiciste, engancha el lazo que soltaste y jalalo a través. Ch1 para cerrar. Para el punto siguiente encima del popcorn, trabaja en ese ch1.</p>
+    <p><strong>Nota importante:</strong> Cada popcorn cuenta como UN punto para el conteo total. Lleva los colores contigo en lugar de cortarlos en cada cambio de color.</p>
+  </div>
+
+  <!-- ABREVIACIONES -->
+  <h2 style="font-family:'Playfair Display',serif;color:var(--gray-mid);margin-bottom:12px;font-size:1.15rem;text-transform:uppercase;letter-spacing:1px;">Abreviaciones</h2>
+  <table class="abbrev-table">
+    <tr><th>Abreviación</th><th>Significado</th><th>Qué haces</th></tr>
+    <tr><td>sc</td><td>Punto bajo</td><td>El punto básico. Insertas, tomas hilo, sacas por 2 lazadas.</td></tr>
+    <tr><td>dc</td><td>Punto alto</td><td>Toma hilo antes de insertar, saca lazada, toma hilo saca por 2, toma hilo saca por 2.</td></tr>
+    <tr><td>hdc</td><td>Medio punto alto</td><td>Toma hilo antes, inserta, saca lazada, toma hilo saca por las 3 lazadas juntas.</td></tr>
+    <tr><td>inc</td><td>Aumento</td><td>2sc en el mismo punto.</td></tr>
+    <tr><td>dec</td><td>Disminución invisible</td><td>Solo por lazos delanteros de 2 puntos consecutivos, cierra.</td></tr>
+    <tr><td>dec2</td><td>Doble disminución</td><td>3 puntos convertidos en 1 — inserta en 3 puntos consecutivos.</td></tr>
+    <tr><td>slst</td><td>Punto deslizado</td><td>Inserta y saca por todo de una vez. No da altura.</td></tr>
+    <tr><td>sk slst</td><td>Saltar + punto deslizado</td><td>Salta el primer punto y haz slst en el siguiente.</td></tr>
+    <tr><td>ch</td><td>Cadena</td><td>Sin insertar, toma hilo y saca por el lazo.</td></tr>
+    <tr><td>blo</td><td>Solo lazo trasero</td><td>Inserta solo por el lazo de atrás.</td></tr>
+    <tr><td>puff</td><td>Punto puff</td><td>Ver sección de puntos especiales arriba.</td></tr>
+    <tr><td>dblpuff</td><td>Doble puff</td><td>Ver sección de puntos especiales arriba.</td></tr>
+    <tr><td>popcorn</td><td>Punto popcorn</td><td>Ver sección de puntos especiales arriba.</td></tr>
+    <tr><td>3sc in next</td><td>3sc en el mismo punto</td><td>3 puntos bajos en UN solo punto — crea una esquina redondeada.</td></tr>
+    <tr><td>rnd</td><td>Vuelta (espiral)</td><td>Vuelta completa en espiral continua.</td></tr>
+    <tr><td>row / fila</td><td>Fila</td><td>De un extremo al otro, luego ch1 y giras.</td></tr>
+  </table>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>📋 Orden de tejido — 14 piezas</h3>
+    <ol>
+      <li><strong>Muzzle (Hocico)</strong> — MC</li>
+      <li><strong>Head (Cabeza)</strong> — MC, ojos 25mm</li>
+      <li><strong>Nose (Nariz)</strong> — Black</li>
+      <li><strong>Eyelids (Párpados)</strong> — MC, 2 conectados</li>
+      <li><strong>Outside Ears (Orejas exteriores)</strong> — MC, hacer 2</li>
+      <li><strong>Inside Ears (Orejas interiores)</strong> — Pink, hacer 2</li>
+      <li><strong>Front Feet/Legs (Patas delanteras)</strong> — MC, hacer 2</li>
+      <li><strong>Middle Feet/Legs (Patas medias)</strong> — MC, hacer 2</li>
+      <li><strong>Back Feet/Legs (Patas traseras)</strong> — MC, hacer 2</li>
+      <li><strong>Haunches (Caderas)</strong> — MC, hacer 2</li>
+      <li><strong>Tentacles (Tentáculos)</strong> — alambre + Pink + Cream + MC, hacer 2</li>
+      <li><strong>Tail (Cola)</strong> — MC + alambre</li>
+      <li><strong>Body (Cuerpo)</strong> — MC</li>
+      <li><strong>Finishing Assembly (Armado final)</strong></li>
+    </ol>
+  </div>
+
+  <!-- ==================== PIEZA 1: MUZZLE ==================== -->
+  <div class="piece-header">
+    <div class="piece-number">Pieza 1 de 13</div>
+    <h2>😺 Hocico (Muzzle)</h2>
+    <div class="subtitle">Con MC — Gris medio</div>
+  </div>
+  <div class="piece-body">
+    <div class="intro-p">El hocico es una pieza ovalada que se cose sobre la cabeza. Tiene un relieve redondeado — el "puente de la nariz" quedará entre los dos ojos. Se rellena mientras se cose.</div>
+    <div class="step"><div class="step-label">INICIO</div><div class="step-content"><div class="stitch-line">Con MC, haz un anillo mágico.</div></div></div>
+    <div class="step"><div class="step-label">Rnd 1</div><div class="step-content"><div class="stitch-line">6sc en el anillo <span class="stitch-count">6 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 2</div><div class="step-content"><div class="stitch-line">6inc <span class="stitch-count">12 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 3</div><div class="step-content"><div class="stitch-line">[sc, inc] x 6 <span class="stitch-count">18 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 4</div><div class="step-content"><div class="stitch-line">sc, inc, [2sc, inc] x 5, sc <span class="stitch-count">24 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 5</div><div class="step-content"><div class="stitch-line">24sc <span class="stitch-count">24 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 6</div><div class="step-content"><div class="stitch-line">[3sc, inc] x 6 <span class="stitch-count">30 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 7</div><div class="step-content"><div class="stitch-line">2sc, inc, [4sc, inc] x 5, 2sc <span class="stitch-count">36 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 8</div><div class="step-content"><div class="stitch-line">36sc <span class="stitch-count">36 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 9</div><div class="step-content"><div class="stitch-line">[2sc, inc] x 12 <span class="stitch-count">48 pts</span></div></div></div>
+    <div class="step"><div class="step-label">REMATE</div><div class="step-content"><div class="stitch-line">sc, slst — remata dejando una punta larga para coser.</div></div></div>
+  </div>
+
+  <!-- ==================== PIEZA 2: HEAD ==================== -->
+  <div class="piece-header">
+    <div class="piece-number">Pieza 2 de 13</div>
+    <h2>🐱 Cabeza (Head)</h2>
+    <div class="subtitle">Con MC — Gris medio</div>
+  </div>
+  <div class="piece-body">
+    <div class="intro-p">La cabeza es grande — llega a 84 puntos. Los ojos de seguridad de 25mm van entre las vueltas 21 y 22, con 15 espacios entre cada ojo. El hocico se cose después sobre la cara.</div>
+    <div class="step"><div class="step-label">INICIO</div><div class="step-content"><div class="stitch-line">Con MC, haz un anillo mágico.</div></div></div>
+    <div class="step"><div class="step-label">Rnd 1</div><div class="step-content"><div class="stitch-line">6sc en el anillo <span class="stitch-count">6 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 2</div><div class="step-content"><div class="stitch-line">6inc <span class="stitch-count">12 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 3</div><div class="step-content"><div class="stitch-line">[sc, inc] x 6 <span class="stitch-count">18 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 4</div><div class="step-content"><div class="stitch-line">sc, inc, [2sc, inc] x 5, sc <span class="stitch-count">24 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 5</div><div class="step-content"><div class="stitch-line">[3sc, inc] x 6 <span class="stitch-count">30 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 6</div><div class="step-content"><div class="stitch-line">2sc, inc, [4sc, inc] x 5, 2sc <span class="stitch-count">36 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 7</div><div class="step-content"><div class="stitch-line">[5sc, inc] x 6 <span class="stitch-count">42 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 8</div><div class="step-content"><div class="stitch-line">3sc, inc, [6sc, inc] x 5, 3sc <span class="stitch-count">48 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 9</div><div class="step-content"><div class="stitch-line">48sc <span class="stitch-count">48 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 10</div><div class="step-content"><div class="stitch-line">[7sc, inc] x 6 <span class="stitch-count">54 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 11</div><div class="step-content"><div class="stitch-line">4sc, inc, [8sc, inc] x 5, 4sc <span class="stitch-count">60 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 12</div><div class="step-content"><div class="stitch-line">60sc <span class="stitch-count">60 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 13</div><div class="step-content"><div class="stitch-line">[9sc, inc] x 6 <span class="stitch-count">66 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 14</div><div class="step-content"><div class="stitch-line">5sc, inc, [10sc, inc] x 5, 5sc <span class="stitch-count">72 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 15</div><div class="step-content"><div class="stitch-line">72sc <span class="stitch-count">72 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 16</div><div class="step-content"><div class="stitch-line">[11sc, inc] x 6 <span class="stitch-count">78 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 17–18</div><div class="step-content"><div class="stitch-line">78sc <span class="stitch-count">78 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 19</div><div class="step-content"><div class="stitch-line">6sc, inc, [12sc, inc] x 5, 6sc <span class="stitch-count">84 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 20–26</div><div class="step-content"><div class="stitch-line">84sc <span class="stitch-count">84 pts</span></div></div></div>
+    <div class="warn-box">
+      <div class="box-title">🔴 PON LOS OJOS AHORA — entre Rnds 21 y 22</div>
+      Coloca los ojos de seguridad de 25mm entre las vueltas 21 y 22, con 15 espacios entre cada ojo. Son ojos muy grandes — asegúrate de que el pasador de seguridad esté bien fijado por dentro antes de continuar. Después de la vuelta 33 ya no podrás meterlos.
+    </div>
+    <div class="step"><div class="step-label">Rnd 27</div><div class="step-content"><div class="stitch-line">6sc, dec, [12sc, dec] x 5, 6sc <span class="stitch-count">78 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 28</div><div class="step-content"><div class="stitch-line">[11sc, dec] x 6 <span class="stitch-count">72 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 29</div><div class="step-content"><div class="stitch-line">5sc, dec, [10sc, dec] x 5, 5sc <span class="stitch-count">66 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 30</div><div class="step-content"><div class="stitch-line">[9sc, dec] x 6 <span class="stitch-count">60 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 31</div><div class="step-content"><div class="stitch-line">4sc, dec, [8sc, dec] x 5, 4sc <span class="stitch-count">54 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 32</div><div class="step-content"><div class="stitch-line">[7sc, dec] x 6 <span class="stitch-count">48 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 33</div><div class="step-content"><div class="stitch-line">3sc, dec, [6sc, dec] x 5, 3sc <span class="stitch-count">42 pts</span></div><div class="explanation">¡Empieza a rellenar firmemente ahora y sigue rellenando mientras cierras!</div></div></div>
+    <div class="step"><div class="step-label">Rnd 34</div><div class="step-content"><div class="stitch-line">[5sc, dec] x 6 <span class="stitch-count">36 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 35</div><div class="step-content"><div class="stitch-line">2sc, dec, [4sc, dec] x 5, 2sc <span class="stitch-count">30 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 36</div><div class="step-content"><div class="stitch-line">[3sc, dec] x 6 <span class="stitch-count">24 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 37</div><div class="step-content"><div class="stitch-line">[2sc, dec] x 6 <span class="stitch-count">18 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 38</div><div class="step-content"><div class="stitch-line">9dec <span class="stitch-count">9 pts</span></div></div></div>
+    <div class="note-box"><div class="box-title">✂️ Terminar</div>Remata, cierra el agujero con la aguja de tapicería. Fija el hocico en la cara con alfileres — el puente de la nariz va entre los dos ojos. Rellena mientras coses. Cose en su lugar.</div>
+  </div>
+
+  <!-- ==================== PIEZA 3: NOSE ==================== -->
+  <div class="piece-header">
+    <div class="piece-number">Pieza 3 de 13</div>
+    <h2>🖤 Nariz (Nose)</h2>
+    <div class="subtitle">Con Black — Negro</div>
+  </div>
+  <div class="piece-body">
+    <div class="intro-p">La nariz es una pieza pequeña triangular que se cose sobre el hocico. Se va angostando en 3 filas cortas.</div>
+    <div class="step"><div class="step-label">INICIO</div><div class="step-content"><div class="stitch-line">Con Black, ch5.</div></div></div>
+    <div class="step"><div class="step-label">Fila 1</div><div class="step-content"><div class="stitch-line">Empezando en el 2do ch desde la aguja: 4sc <span class="stitch-count">4 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 2</div><div class="step-content"><div class="stitch-line">Ch1, gira, sc, dec, sc <span class="stitch-count">3 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 3</div><div class="step-content"><div class="stitch-line">Ch1, gira, 3sc juntos (sc3tog) <span class="stitch-count">1 pt</span></div><div class="explanation">Para el sc3tog: inserta en los 3 puntos de esta fila, toma hilo y saca por todos — forma la punta de la nariz.</div></div></div>
+    <div class="note-box"><div class="box-title">✂️ Terminar</div>Remata dejando una punta larga. Cose la nariz sobre el hocico. Luego cose el hocico (con nariz incluida) a la cabeza.</div>
+  </div>
+
+  <!-- ==================== PIEZA 4: EYELIDS ==================== -->
+  <div class="piece-header">
+    <div class="piece-number">Pieza 4 de 13</div>
+    <h2>👁️ Párpados (Eyelids)</h2>
+    <div class="subtitle">Con MC — Gris medio · Se hacen 2 conectados en una sola pieza</div>
+  </div>
+  <div class="piece-body">
+    <div class="intro-p">Los dos párpados se hacen en UNA sola fila — empiezas con una cadena larga y tejes los dos párpados conectados. Luego se separan al coserlos sobre cada ojo. El patrón sube con dc y hdc hacia el centro de cada párpado para crear la curva.</div>
+    <div class="step"><div class="step-label">INICIO</div><div class="step-content"><div class="stitch-line">Con MC, ch13.</div></div></div>
+    <div class="step"><div class="step-label">Fila 1</div><div class="step-content">
+      <div class="stitch-line">Empezando en el 2do ch desde la aguja: sc, hdc, 8dc, hdc, sc — ch13, empezando en el 2do ch desde la aguja: sc, hdc, 8dc, hdc, sc <span class="stitch-count">24 pts</span></div>
+      <div class="explanation">Esta única fila crea los dos párpados conectados por el punto del extremo izquierdo del primer párpado con el punto del extremo derecho del segundo. Los puntos sc son los extremos planos, los hdc son la transición, y los dc del centro crean el arco. El resultado debe parecerse a dos arcos curvos — como dos cejas arqueadas.</div>
+    </div></div>
+    <div class="note-box"><div class="box-title">✂️ Terminar</div>Remata dejando una punta larga. Para coser: primero fija los puntos extremos y el borde plano alrededor de cada ojo con alfileres, luego jala los bordes curvos para que abran bien alrededor del ojo. Cose en su lugar.</div>
+  </div>
+
+  <!-- ==================== PIEZA 5 y 6: EARS ==================== -->
+  <div class="piece-header">
+    <div class="piece-number">Piezas 5 y 6 de 13</div>
+    <h2>👂 Orejas (Ears)</h2>
+    <div class="subtitle">Outside Ears con MC + Inside Ears con Pink · Hacer 2 de cada una</div>
+  </div>
+  <div class="piece-body">
+    <div class="intro-p">Las orejas tienen dos capas: la exterior (gris) y la interior (rosa). Se tejen por separado y se unen en la fila 11. El patrón de 3sc en el punto central de cada fila crea la punta triangular característica de gato.</div>
+
+    <div class="sub-section">
+      <h3>Oreja Exterior (Outside Ear) — hacer 2 con MC</h3>
+      <div class="step"><div class="step-label">INICIO</div><div class="step-content"><div class="stitch-line">Con MC, anillo mágico.</div></div></div>
+      <div class="step"><div class="step-label">Fila 1</div><div class="step-content"><div class="stitch-line">3sc en el anillo <span class="stitch-count">3 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Filas 2–10</div><div class="step-content">
+        <div class="stitch-line">Ch1, gira, [Nsc, 3sc en el siguiente, Nsc] donde N aumenta de 1 a 9</div>
+        <div class="explanation">El patrón es siempre: ch1, gira, sc en todos los puntos excepto en el punto central donde haces 3sc. El número de sc en cada lado aumenta 1 cada fila: Fila 2 = sc,3sc,sc / Fila 3 = 2sc,3sc,2sc / ... / Fila 10 = 9sc,3sc,9sc. Esto crea el triángulo que se agranda con la punta en el centro.</div>
+      </div></div>
+      <div class="note-box"><div class="box-title">✂️ Terminar la oreja exterior</div>Remata y esconde las puntas. Al terminar debe ser un triángulo gris de 10 filas.</div>
+    </div>
+
+    <div class="sub-section">
+      <h3>Oreja Interior (Inside Ear) — hacer 2 con Pink</h3>
+      <div class="step"><div class="step-label">INICIO</div><div class="step-content"><div class="stitch-line">Con Pink, anillo mágico.</div></div></div>
+      <div class="step"><div class="step-label">Filas 1–8</div><div class="step-content">
+        <div class="stitch-line">Mismo patrón que la oreja exterior pero solo hasta la Fila 8 (7sc, 3sc en centro, 7sc)</div>
+        <div class="explanation">La oreja interior es un poco más pequeña que la exterior para que quede enmarcada dentro.</div>
+      </div></div>
+      <div class="note-box"><div class="box-title">✂️ Terminar la oreja interior</div>Remata y esconde las puntas.</div>
+    </div>
+
+    <div class="sub-section">
+      <h3>Unir las dos capas</h3>
+      <div class="step"><div class="step-label">Fila 9 MC</div><div class="step-content"><div class="stitch-line">Con MC, ch1, gira, 8sc, 3sc en centro, 8sc <span class="stitch-count">19 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 10 MC</div><div class="step-content"><div class="stitch-line">Ch1, gira, 9sc, 3sc en centro, 9sc <span class="stitch-count">21 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 11</div><div class="step-content">
+        <div class="stitch-line">Ch1, gira, apila la oreja interior ENCIMA de la exterior (lados equivocados juntos, las puntas alineadas), trabajando a través de AMBAS piezas: 10sc, 3sc en centro, 10sc <span class="stitch-count">23 pts</span></div>
+        <div class="explanation">Esta fila une las dos orejas. Sostén la interior (rosa) sobre la exterior (gris) con las puntas alineadas, y teje pasando la aguja por los dos tejidos al mismo tiempo en cada punto. La cara rosa queda mirando hacia afuera.</div>
+      </div></div>
+      <div class="step"><div class="step-label">Fila 12</div><div class="step-content">
+        <div class="stitch-line">Ch1, trabajando a lo largo de la base de la oreja: 20sc uniformemente, slst <span class="stitch-count">20 pts</span></div>
+        <div class="explanation">Esta fila cierra la base de la oreja con un borde parejo. Teje uniformemente a lo largo del borde inferior.</div>
+      </div></div>
+      <div class="note-box"><div class="box-title">✂️ Terminar</div>Remata dejando una punta larga para coser. Esconde todas las otras puntas. Dobla ligeramente las orejas y fíjalas en la parte superior de la cabeza con alfileres. Cose en su lugar.</div>
+    </div>
+  </div>
+
+  <!-- ==================== PIEZAS 7, 8, 9: PATAS ==================== -->
+  <div class="piece-header">
+    <div class="piece-number">Piezas 7, 8 y 9 de 13</div>
+    <h2>🐾 Patas (Front, Middle y Back Feet/Legs)</h2>
+    <div class="subtitle">Con MC — Gris medio · Hacer 2 de cada tipo (6 patas en total)</div>
+  </div>
+  <div class="piece-body">
+    <div class="intro-p">Las 3 pares de patas tienen un inicio muy similar: todas empiezan con ch7 y se tejen alrededor de esa cadena para formar el pie. La diferencia está en su longitud y en cómo se cierra la parte superior. Los puntos puff crean las "almohadillas" del pie, y el dblpuff forma una ligera disminución decorativa.</div>
+
+    <div class="special-box">
+      <div class="box-title">🐾 Inicio común a las 3 patas — base del pie</div>
+      <p>Todas las patas empiezan igual: <strong>Con MC, Ch7. Rnd 1:</strong> empezando en el 2do ch desde la aguja 5sc, 2sc en el último ch (rodear la punta), trabajando por el lado de atrás de la cadena: 5sc (12 puntos). Luego continúan con las diferencias de cada tipo. El alambre va dentro de las patas traseras solamente.</p>
+    </div>
+
+    <div class="sub-section">
+      <h3>Patas Delanteras (Front Feet/Legs) — hacer 2</h3>
+      <div class="step"><div class="step-label">Rnds 1</div><div class="step-content"><div class="stitch-line">Inicio común de pie <span class="stitch-count">12 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 2</div><div class="step-content"><div class="stitch-line">[sc, inc] x 6 <span class="stitch-count">18 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 3</div><div class="step-content"><div class="stitch-line">18sc <span class="stitch-count">18 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 4</div><div class="step-content">
+        <div class="stitch-line">4sc, puff, sc, puff, 11sc <span class="stitch-count">18 pts</span></div>
+        <div class="explanation">Los dos puntos puff son las almohadillas del pie. Recuerda: después de cada puff haces ch1 para cerrarlo.</div>
+      </div></div>
+      <div class="step"><div class="step-label">Rnd 5</div><div class="step-content"><div class="stitch-line">3sc, puff, 3sc, puff, 10sc <span class="stitch-count">18 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 6</div><div class="step-content"><div class="stitch-line">18sc <span class="stitch-count">18 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 7</div><div class="step-content">
+        <div class="stitch-line">4sc, dblpuff, 11sc <span class="stitch-count">16 pts</span></div>
+        <div class="explanation">El dblpuff es una disminución decorativa. Ocupa 3 espacios y los convierte en 1, por eso el conteo baja de 18 a 16.</div>
+      </div></div>
+      <div class="step"><div class="step-label">Rnd 8</div><div class="step-content"><div class="stitch-line">4sc, 3sc en el siguiente, 11sc <span class="stitch-count">18 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 9</div><div class="step-content"><div class="stitch-line">3sc, dec, 3sc, dec, 4sc, [inc, sc] x 2 <span class="stitch-count">18 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 10</div><div class="step-content"><div class="stitch-line">3sc, dec2, 6sc, inc, sc, inc, 2sc <span class="stitch-count">18 pts</span></div></div></div>
+      <div class="tip-box"><div class="box-title">💡 Ahora pasas a filas</div>A partir de aquí tejes en filas (de un lado al otro), no en espiral.</div>
+      <div class="step"><div class="step-label">Fila 11</div><div class="step-content"><div class="stitch-line">Ch1, gira, 9sc <span class="stitch-count">9 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 12</div><div class="step-content">
+        <div class="stitch-line">Ch1, gira, dec, 5sc, dec, sc en el lado de la Fila 11, dec en Rnd 10, 5sc, dec, sc en el lado de la Fila 11 <span class="stitch-count">16 pts</span></div>
+        <div class="explanation">Esta fila une los dos lados de la pata. Los sc en "el lado de la Fila 11" se hacen en las cabeceras de esa fila lateral, uniendo el frente con el dorso de la pata. El primer dec de la Fila 12 es ahora el primer punto de las vueltas en espiral que siguen.</div>
+      </div></div>
+      <div class="step"><div class="step-label">Rnds 13–16</div><div class="step-content"><div class="stitch-line">16sc <span class="stitch-count">16 pts</span></div><div class="explanation">Rellena el pie y la pierna mientras trabajas.</div></div></div>
+      <div class="step"><div class="step-label">Rnd 17</div><div class="step-content"><div class="stitch-line">[7sc, inc] x 2 <span class="stitch-count">18 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnds 18–20</div><div class="step-content"><div class="stitch-line">18sc <span class="stitch-count">18 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 21</div><div class="step-content"><div class="stitch-line">[5sc, inc] x 3 <span class="stitch-count">21 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnds 22–24</div><div class="step-content"><div class="stitch-line">21sc <span class="stitch-count">21 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 25</div><div class="step-content"><div class="stitch-line">3sc, inc, [6sc, inc] x 2, 3sc <span class="stitch-count">24 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 26</div><div class="step-content"><div class="stitch-line">[7sc, inc] x 3 <span class="stitch-count">27 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 27</div><div class="step-content"><div class="stitch-line">27sc <span class="stitch-count">27 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 28</div><div class="step-content">
+        <div class="stitch-line">4sc, inc, [8sc, inc] x 2, 4sc <span class="stitch-count">30 pts</span></div>
+        <div class="explanation">Al terminar la parte superior del hombro, no rellenes demasiado — debe quedar algo aplastado para pegarse bien al cuerpo. El resto de la pata sí debe estar bien relleno.</div>
+      </div></div>
+      <div class="step"><div class="step-label">Rnd 29</div><div class="step-content"><div class="stitch-line">30sc <span class="stitch-count">30 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 30</div><div class="step-content"><div class="stitch-line">[9sc, inc] x 3 <span class="stitch-count">33 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 31</div><div class="step-content"><div class="stitch-line">5sc, inc, [10sc, inc] x 2, 5sc <span class="stitch-count">36 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnds 32–34</div><div class="step-content"><div class="stitch-line">36sc <span class="stitch-count">36 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 35</div><div class="step-content"><div class="stitch-line">2sc, dec, [4sc, dec] x 5, 2sc <span class="stitch-count">30 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 36</div><div class="step-content"><div class="stitch-line">30sc <span class="stitch-count">30 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 37</div><div class="step-content"><div class="stitch-line">4sc, dec, [8sc, dec] x 2, 4sc <span class="stitch-count">27 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 38</div><div class="step-content"><div class="stitch-line">27sc <span class="stitch-count">27 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 39</div><div class="step-content"><div class="stitch-line">[7sc, dec] x 3 <span class="stitch-count">24 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 40</div><div class="step-content"><div class="stitch-line">[2sc, dec] x 6 <span class="stitch-count">18 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 41</div><div class="step-content"><div class="stitch-line">9dec <span class="stitch-count">9 pts</span></div></div></div>
+      <div class="note-box"><div class="box-title">✂️ Terminar</div>Remata dejando una punta larga. Cierra el agujero con la aguja de tapicería, dejando la punta para coser al cuerpo.</div>
+    </div>
+
+    <div class="sub-section">
+      <h3>Patas Medias (Middle Feet/Legs) — hacer 2</h3>
+      <div class="intro-p" style="font-style:normal;">Las patas medias siguen el mismo inicio y pie que las delanteras. Desde la Fila 8 cambia la estructura.</div>
+      <div class="step"><div class="step-label">Rnds 1–7</div><div class="step-content"><div class="stitch-line">Igual que las patas delanteras hasta Rnd 7 inclusive</div></div></div>
+      <div class="step"><div class="step-label">Fila 8</div><div class="step-content"><div class="stitch-line">8sc, slst <span class="stitch-count">8 pts</span></div><div class="explanation">Esta fila empieza la transición a filas planas para formar el tobillo.</div></div></div>
+      <div class="step"><div class="step-label">Fila 9</div><div class="step-content"><div class="stitch-line">Gira, sk slst, 6sc, slst <span class="stitch-count">6 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Filas 10–13</div><div class="step-content"><div class="stitch-line">Gira, sk slst, 6sc, slst en el siguiente punto sin trabajar de la Rnd 7 <span class="stitch-count">6 pts</span></div><div class="explanation">El slst final de cada fila se engancha en el siguiente punto sin usar de la Rnd 7, "jalando" los lados del tobillo hacia adentro para dar forma.</div></div></div>
+      <div class="step"><div class="step-label">Fila 14</div><div class="step-content"><div class="stitch-line">Gira, sk slst, 6sc, inc4 <span class="stitch-count">14 pts</span></div><div class="explanation">El inc4 es un aumento de 4 puntos seguidos en los últimos puntos — aquí empieza a ensancharse el muslo.</div></div></div>
+      <div class="tip-box"><div class="box-title">💡 Ahora vuelves a vueltas en espiral</div>El primer punto de la vuelta es el primer dec de la Fila 12 equivalente.</div>
+      <div class="step"><div class="step-label">Rnd 15</div><div class="step-content"><div class="stitch-line">inc, 4sc, inc, 8sc <span class="stitch-count">16 pts</span></div><div class="explanation">Rellena el pie y la pierna mientras trabajas.</div></div></div>
+      <div class="step"><div class="step-label">Rnd 16</div><div class="step-content"><div class="stitch-line">16sc <span class="stitch-count">16 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 17</div><div class="step-content"><div class="stitch-line">inc, 8sc, inc, 6sc <span class="stitch-count">18 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnds 18–20</div><div class="step-content"><div class="stitch-line">18sc <span class="stitch-count">18 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 21</div><div class="step-content"><div class="stitch-line">[5sc, inc] x 3 <span class="stitch-count">21 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnds 22–24</div><div class="step-content"><div class="stitch-line">21sc <span class="stitch-count">21 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 25</div><div class="step-content"><div class="stitch-line">[6sc, inc] x 3 <span class="stitch-count">24 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnds 26–34</div><div class="step-content"><div class="stitch-line">24sc <span class="stitch-count">24 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 35</div><div class="step-content"><div class="stitch-line">[6sc, dec] x 3 <span class="stitch-count">21 pts</span></div><div class="explanation">No rellenes demasiado el hombro — debe quedar algo aplanado.</div></div></div>
+      <div class="step"><div class="step-label">Rnds 36–42</div><div class="step-content"><div class="stitch-line">21sc <span class="stitch-count">21 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 43</div><div class="step-content"><div class="stitch-line">[5sc, dec] x 3 <span class="stitch-count">18 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 44</div><div class="step-content"><div class="stitch-line">18sc <span class="stitch-count">18 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 45</div><div class="step-content"><div class="stitch-line">9dec <span class="stitch-count">9 pts</span></div></div></div>
+      <div class="note-box"><div class="box-title">✂️ Terminar</div>Remata dejando una punta larga. Cierra el agujero con la aguja de tapicería.</div>
+    </div>
+
+    <div class="sub-section">
+      <h3>Patas Traseras (Back Feet/Legs) — hacer 2</h3>
+      <div class="intro-p" style="font-style:normal;">Las patas traseras son idénticas a las medias en el pie (Rnds 1–14), pero son más cortas en total.</div>
+      <div class="step"><div class="step-label">Rnds 1–14</div><div class="step-content"><div class="stitch-line">Igual que las patas medias hasta Fila 14 inclusive</div></div></div>
+      <div class="step"><div class="step-label">Rnd 15</div><div class="step-content"><div class="stitch-line">inc, 4sc, inc, 8sc <span class="stitch-count">16 pts</span></div><div class="explanation">Rellena el pie y sigue rellenando mientras avanzas.</div></div></div>
+      <div class="step"><div class="step-label">Rnds 8–13</div><div class="step-content"><div class="stitch-line">16sc <span class="stitch-count">16 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 14</div><div class="step-content"><div class="stitch-line">6sc, dec, 8sc <span class="stitch-count">15 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnds 15–19</div><div class="step-content"><div class="stitch-line">15sc <span class="stitch-count">15 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 20</div><div class="step-content"><div class="stitch-line">[3sc, dec] x 3 <span class="stitch-count">12 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 21</div><div class="step-content"><div class="stitch-line">6dec <span class="stitch-count">6 pts</span></div></div></div>
+      <div class="note-box"><div class="box-title">✂️ Terminar</div>Remata y cierra el agujero dejando una punta larga para coser.</div>
+    </div>
+  </div>
+
+  <!-- ==================== PIEZA 10: HAUNCHES ==================== -->
+  <div class="piece-header">
+    <div class="piece-number">Pieza 10 de 13</div>
+    <h2>🍑 Caderas (Haunches)</h2>
+    <div class="subtitle">Con MC — Gris medio · Hacer 2</div>
+  </div>
+  <div class="piece-body">
+    <div class="intro-p">Las caderas son piezas ovaladas que se cosen en la parte superior de las patas traseras para crear la musculatura de las nalgas del Displacer Beast. Se rellenan ligeramente — deben quedar algo aplanadas para pegarse bien al cuerpo.</div>
+    <div class="step"><div class="step-label">INICIO</div><div class="step-content"><div class="stitch-line">Con MC, anillo mágico.</div></div></div>
+    <div class="step"><div class="step-label">Rnd 1</div><div class="step-content"><div class="stitch-line">6sc en el anillo <span class="stitch-count">6 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 2</div><div class="step-content"><div class="stitch-line">6inc <span class="stitch-count">12 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 3</div><div class="step-content"><div class="stitch-line">[sc, inc] x 6 <span class="stitch-count">18 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 4</div><div class="step-content"><div class="stitch-line">sc, inc, [2sc, inc] x 5, sc <span class="stitch-count">24 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 5</div><div class="step-content"><div class="stitch-line">[3sc, inc] x 6 <span class="stitch-count">30 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 6</div><div class="step-content"><div class="stitch-line">2sc, inc, [4sc, inc] x 5, 2sc <span class="stitch-count">36 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 7</div><div class="step-content"><div class="stitch-line">36sc <span class="stitch-count">36 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 8</div><div class="step-content"><div class="stitch-line">[5sc, inc] x 6 <span class="stitch-count">42 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 9</div><div class="step-content"><div class="stitch-line">42sc <span class="stitch-count">42 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 10</div><div class="step-content"><div class="stitch-line">3sc, inc, [6sc, inc] x 5, 3sc <span class="stitch-count">48 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 11–17</div><div class="step-content"><div class="stitch-line">48sc <span class="stitch-count">48 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 18</div><div class="step-content"><div class="stitch-line">19sc, [dec, 2sc] x 2, dec, 19sc <span class="stitch-count">45 pts</span></div><div class="explanation">Marca la disminución central con un marcador de punto — ese lado es la rodilla (frente de la cadera).</div></div></div>
+    <div class="step"><div class="step-label">Rnds 19–21</div><div class="step-content"><div class="stitch-line">45sc <span class="stitch-count">45 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 22</div><div class="step-content"><div class="stitch-line">18sc, [dec, 2sc] x 2, dec, 17sc <span class="stitch-count">42 pts</span></div><div class="explanation">Marca la disminución central. El lado con las tres disminuciones es el frente de la cadera — básicamente la rodilla.</div></div></div>
+    <div class="step"><div class="step-label">Rnds 23–24</div><div class="step-content"><div class="stitch-line">42sc <span class="stitch-count">42 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 25</div><div class="step-content"><div class="stitch-line">[5sc, dec] x 6 <span class="stitch-count">36 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 26</div><div class="step-content"><div class="stitch-line">36sc <span class="stitch-count">36 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 27</div><div class="step-content"><div class="stitch-line">2sc, dec, [4sc, dec] x 5, 2sc <span class="stitch-count">30 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 28</div><div class="step-content"><div class="stitch-line">30sc <span class="stitch-count">30 pts</span></div><div class="explanation">Rellena ligeramente — la cadera debe quedar algo aplanada para pegar bien al cuerpo.</div></div></div>
+    <div class="step"><div class="step-label">Rnd 29</div><div class="step-content"><div class="stitch-line">[3sc, dec] x 6 <span class="stitch-count">24 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 30</div><div class="step-content"><div class="stitch-line">24sc <span class="stitch-count">24 pts</span></div></div></div>
+    <div class="note-box"><div class="box-title">✂️ Terminar y ensamblar cadera+pata</div>Remata dejando una punta larga. Fija la cadera sobre la pata trasera con la rodilla (las disminuciones) mirando hacia los dedos del pie. La parte de abajo de la cadera se abre ligeramente para coserla en forma oval sobre la parte superior del pie. Usa la punta del pie para coser la cadera en su lugar. Guarda la punta de la cadera para coser después la pata trasera al cuerpo.</div>
+  </div>
+
+  <!-- ==================== PIEZA 11: TENTACLES ==================== -->
+  <div class="piece-header">
+    <div class="piece-number">Pieza 11 de 13</div>
+    <h2>🪱 Tentáculos (Tentacles)</h2>
+    <div class="subtitle">Alambre + Pink + Cream + MC · Hacer 2 completos</div>
+  </div>
+  <div class="piece-body">
+    <div class="intro-p">Los tentáculos son la característica más icónica del Displacer Beast. Cada uno tiene 3 partes: la cabeza interna (Inner Tentacle Head en Pink con popcorns de Cream), la cabeza externa (Outer Tentacle Head en MC), y el tallo largo (Tentacle Stem en MC). Llevan alambre interno para que se puedan doblar en posición.</div>
+
+    <div class="wire-box">
+      <div class="box-title">🔩 Preparación del alambre (hacer 2)</div>
+      Corta dos trozos de alambre calibre 12 de 25 pulgadas (64 cm) cada uno. Con los alicates, dobla ½ pulgada (1 cm) de UN extremo sobre sí mismo para que la punta no perfore el tejido. Luego desde ESE MISMO extremo, haz una doblez completa a 5 pulgadas (12.5 cm) para formar una U larga. Curva los dos lados de la U hacia afuera para crear una forma de pétalo — esa será la estructura de la Cabeza del Tentáculo. Sigue ajustando la forma mientras ensamblas.
+    </div>
+
+    <div class="sub-section">
+      <h3>Cabeza Interna (Inner Tentacle Head) — hacer 2 con Pink y Cream</h3>
+      <div class="intro-p" style="font-style:normal;">Esta pieza tiene popcorns de Cream que crean la textura bumpy característica. Lleva los colores contigo en lugar de cortarlos.</div>
+      <div class="step"><div class="step-label">INICIO</div><div class="step-content"><div class="stitch-line">Con Pink, ch4.</div></div></div>
+      <div class="step"><div class="step-label">Fila 1</div><div class="step-content"><div class="stitch-line">Empezando en el 2do ch: sc across <span class="stitch-count">3 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 2</div><div class="step-content"><div class="stitch-line">Ch1, gira, sc, cambia a Cream: popcorn, cambia a Pink: sc <span class="stitch-count">3 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 3</div><div class="step-content"><div class="stitch-line">Ch1, gira, inc, sc, inc <span class="stitch-count">5 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 4</div><div class="step-content"><div class="stitch-line">Ch1, gira, sc, Cream:popcorn, Pink:sc, Cream:popcorn, Pink:sc <span class="stitch-count">5 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 5</div><div class="step-content"><div class="stitch-line">Ch1, gira, inc, 3sc, inc <span class="stitch-count">7 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 6</div><div class="step-content"><div class="stitch-line">Ch1, gira, sc, [Cream:popcorn, Pink:sc] x 3 <span class="stitch-count">7 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 7</div><div class="step-content"><div class="stitch-line">Ch1, gira, sc across <span class="stitch-count">7 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Filas 8–11</div><div class="step-content"><div class="stitch-line">Repite Filas 6 y 7 alternando <span class="stitch-count">7 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 12</div><div class="step-content"><div class="stitch-line">Repite Fila 6 <span class="stitch-count">7 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 13</div><div class="step-content"><div class="stitch-line">Ch1, gira, dec, 3sc, dec <span class="stitch-count">5 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 14</div><div class="step-content"><div class="stitch-line">Repite Fila 4 <span class="stitch-count">5 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 15</div><div class="step-content"><div class="stitch-line">Ch1, gira, dec, sc, dec <span class="stitch-count">3 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 16</div><div class="step-content"><div class="stitch-line">Repite Fila 2 <span class="stitch-count">3 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 17</div><div class="step-content"><div class="stitch-line">Ch1, gira, sc across <span class="stitch-count">3 pts</span></div></div></div>
+      <div class="note-box"><div class="box-title">✂️ Corta Cream aquí</div>Ahora puedes cortar el hilo Cream.</div>
+      <div class="step"><div class="step-label">Fila 18</div><div class="step-content">
+        <div class="stitch-line">Ch1, gira, 2sc, 3sc en el último punto, gira y 15sc uniformemente bajando por el lado, (3sc, sc, 3sc) a lo largo de la base, 15sc uniformemente subiendo por el otro lado, 2sc en el mismo punto que el primer sc de esta fila, slst <span class="stitch-count">44 pts</span></div>
+        <div class="explanation">Esta fila borda todo el contorno de la cabeza interna en una sola vuelta. Es larga — tómate tu tiempo. Los 15sc en cada lado van insertando en las cabeceras de cada fila. El (3sc, sc, 3sc) crea la punta redondeada de abajo. No rematas — continúas con el ensamblaje.</div>
+      </div></div>
+    </div>
+
+    <div class="sub-section">
+      <h3>Cabeza Externa (Outer Tentacle Head) — hacer 2 con MC</h3>
+      <div class="step"><div class="step-label">INICIO</div><div class="step-content"><div class="stitch-line">Con MC, ch4.</div></div></div>
+      <div class="step"><div class="step-label">Fila 1</div><div class="step-content"><div class="stitch-line">Empezando en el 2do ch: sc across <span class="stitch-count">3 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 2</div><div class="step-content"><div class="stitch-line">Ch1, gira, sc across <span class="stitch-count">3 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 3</div><div class="step-content"><div class="stitch-line">Ch1, gira, inc, sc, inc <span class="stitch-count">5 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 4</div><div class="step-content"><div class="stitch-line">Ch1, gira, sc across <span class="stitch-count">5 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 5</div><div class="step-content"><div class="stitch-line">Ch1, gira, inc, 3sc, inc <span class="stitch-count">7 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Filas 6–12</div><div class="step-content"><div class="stitch-line">Ch1, gira, sc across <span class="stitch-count">7 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 13</div><div class="step-content"><div class="stitch-line">Ch1, gira, dec, 3sc, dec <span class="stitch-count">5 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 14</div><div class="step-content"><div class="stitch-line">Ch1, gira, sc across <span class="stitch-count">5 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 15</div><div class="step-content"><div class="stitch-line">Ch1, gira, dec, sc, dec <span class="stitch-count">3 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Filas 16–17</div><div class="step-content"><div class="stitch-line">Ch1, gira, sc across <span class="stitch-count">3 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Fila 18</div><div class="step-content">
+        <div class="stitch-line">Ch1, gira, 2sc, 3sc en el último punto, gira y 15sc uniformemente bajando por el lado, (3sc, sc, 3sc) a lo largo de la base, 15sc uniformemente subiendo por el otro lado, 2sc en el mismo punto que el primer sc de esta fila, slst <span class="stitch-count">44 pts</span></div>
+        <div class="explanation">Igual que la Fila 18 de la cabeza interna. No rematas.</div>
+      </div></div>
+    </div>
+
+    <div class="sub-section">
+      <h3>Ensamblaje de las cabezas del tentáculo</h3>
+      <div class="special-box">
+        <div class="box-title">🔩 Antes de empezar: NO pongas el alambre todavía</div>
+        Junta las dos cabezas (interna y externa) con los lados equivocados enfrentados. Alinea las puntas superiores. Usa marcadores de punto para sostenerlas mientras trabajas alrededor. El alambre se inserta DESPUÉS.
+      </div>
+      <div class="step"><div class="step-label">Fila 1</div><div class="step-content">
+        <div class="stitch-line">Ch1, gira, 43sc uniformemente alrededor de AMBAS cabezas rellenando mientras avanzas <span class="stitch-count">43 pts</span></div>
+        <div class="explanation">Deben quedar 2 puntos sin trabajar al final.</div>
+      </div></div>
+      <div class="step"><div class="step-label">Filas 2–5</div><div class="step-content"><div class="stitch-line">Ch1, gira, sc across <span class="stitch-count">43 pts</span></div></div></div>
+      <div class="wire-box">
+        <div class="box-title">🔩 Ahora coloca el alambre</div>
+        Remata dejando una punta larga. Coloca el alambre alrededor de las cabezas ensambladas y con los alicates dale la forma final. Dobla el "flap" que acabas de tejer (Filas 1–5) sobre el alambre y cóselo en su lugar a lo largo de la costura donde el Pink se une al MC. Al llegar al extremo, cose los dos lados con una puntada pequeña. Remata, esconde las puntas.
+      </div>
+    </div>
+
+    <div class="sub-section">
+      <h3>Tallo del Tentáculo (Tentacle Stem) — hacer 2 con MC</h3>
+      <div class="step"><div class="step-label">INICIO</div><div class="step-content">
+        <div class="stitch-line">Deja una punta larga al inicio. Engancha MC en cualquier punto a lo largo de la base de la Cabeza del Tentáculo.</div>
+      </div></div>
+      <div class="step"><div class="step-label">Rnd 1</div><div class="step-content">
+        <div class="stitch-line">12sc uniformemente alrededor de la parte MC solo (no en la parte Pink) <span class="stitch-count">12 pts</span></div>
+        <div class="explanation">Guarda la punta larga del inicio por si necesitas cerrar algún agujero después.</div>
+      </div></div>
+      <div class="step"><div class="step-label">Rnds 2–3</div><div class="step-content"><div class="stitch-line">12sc <span class="stitch-count">12 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 4</div><div class="step-content"><div class="stitch-line">[4sc, dec] x 2 <span class="stitch-count">10 pts</span></div><div class="explanation">Rellena y sigue rellenando mientras trabajas.</div></div></div>
+      <div class="step"><div class="step-label">Rnds 5–7</div><div class="step-content"><div class="stitch-line">10sc <span class="stitch-count">10 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 8</div><div class="step-content"><div class="stitch-line">[3sc, dec] x 2 <span class="stitch-count">8 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnds 9–43</div><div class="step-content"><div class="stitch-line">8sc <span class="stitch-count">8 pts</span></div><div class="explanation">¡35 vueltas! Este es el tallo largo del tentáculo.</div></div></div>
+      <div class="step"><div class="step-label">Rnd 44</div><div class="step-content"><div class="stitch-line">[3sc, inc] x 2 <span class="stitch-count">10 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnds 45–48</div><div class="step-content"><div class="stitch-line">10sc <span class="stitch-count">10 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnd 49</div><div class="step-content"><div class="stitch-line">[4sc, inc] x 2 <span class="stitch-count">12 pts</span></div></div></div>
+      <div class="step"><div class="step-label">Rnds 50–53</div><div class="step-content"><div class="stitch-line">12sc <span class="stitch-count">12 pts</span></div></div></div>
+      <div class="note-box"><div class="box-title">✂️ Terminar</div>Remata dejando una punta larga para coser al cuerpo.</div>
+    </div>
+  </div>
+
+  <!-- ==================== PIEZA 12: TAIL ==================== -->
+  <div class="piece-header">
+    <div class="piece-number">Pieza 12 de 13</div>
+    <h2>🌀 Cola (Tail)</h2>
+    <div class="subtitle">Con MC + alambre de 18 pulgadas (46 cm)</div>
+  </div>
+  <div class="piece-body">
+    <div class="intro-p">La cola lleva un alambre interno que permite doblarla en posición. Empieza delgada, se achata en el medio, y se ensancha al llegar a la base donde se une al cuerpo.</div>
+    <div class="wire-box">
+      <div class="box-title">🔩 Preparación del alambre de la cola</div>
+      Corta 18 pulgadas (46 cm) de alambre calibre 12. Con alicates, dobla ½ pulgada (1 cm) de un extremo sobre sí mismo para que la punta no perfore el tejido. Inserta este extremo doblado dentro de la cola al terminar la Rnd 9, rellenando alrededor del alambre mientras avanzas.
+    </div>
+    <div class="step"><div class="step-label">INICIO</div><div class="step-content"><div class="stitch-line">Con MC, anillo mágico.</div></div></div>
+    <div class="step"><div class="step-label">Rnd 1</div><div class="step-content"><div class="stitch-line">6sc en el anillo <span class="stitch-count">6 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 2</div><div class="step-content"><div class="stitch-line">6inc <span class="stitch-count">12 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 3–9</div><div class="step-content"><div class="stitch-line">12sc <span class="stitch-count">12 pts</span></div></div></div>
+    <div class="wire-box"><div class="box-title">🔩 Inserta el alambre ahora</div>Mete el extremo doblado del alambre por la apertura del inicio de la cola. Rellena alrededor del alambre mientras continúas tejiendo.</div>
+    <div class="step"><div class="step-label">Rnd 10</div><div class="step-content"><div class="stitch-line">[4sc, dec] x 2 <span class="stitch-count">10 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 11–55</div><div class="step-content"><div class="stitch-line">10sc <span class="stitch-count">10 pts</span></div><div class="explanation">45 vueltas de tallo. Rellena mientras avanzas y mantén el alambre centrado.</div></div></div>
+    <div class="step"><div class="step-label">Rnd 56</div><div class="step-content"><div class="stitch-line">[4sc, inc] x 2 <span class="stitch-count">12 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 57–64</div><div class="step-content"><div class="stitch-line">12sc <span class="stitch-count">12 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 65</div><div class="step-content"><div class="stitch-line">[5sc, inc] x 2 <span class="stitch-count">14 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 66–71</div><div class="step-content"><div class="stitch-line">14sc <span class="stitch-count">14 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 72</div><div class="step-content"><div class="stitch-line">[6sc, inc] x 2 <span class="stitch-count">16 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 73–76</div><div class="step-content"><div class="stitch-line">16sc <span class="stitch-count">16 pts</span></div></div></div>
+    <div class="note-box"><div class="box-title">✂️ Terminar</div>Remata dejando una punta larga para coser. Puedes doblar la cola en una forma de S mientras trabajas en el cuerpo — así no estorba.</div>
+  </div>
+
+  <!-- ==================== PIEZA 13: BODY ==================== -->
+  <div class="piece-header">
+    <div class="piece-number">Pieza 13 de 13</div>
+    <h2>🐈 Cuerpo (Body)</h2>
+    <div class="subtitle">Con MC — Gris medio</div>
+  </div>
+  <div class="piece-body">
+    <div class="intro-p">El cuerpo es la pieza más grande — llega a 84 puntos. Se teje en espiral. La cola se adjunta desde adentro durante las vueltas finales, lo cual requiere pausa para insertar el alambre antes de cerrar completamente.</div>
+    <div class="step"><div class="step-label">INICIO</div><div class="step-content"><div class="stitch-line">Con MC, anillo mágico.</div></div></div>
+    <div class="step"><div class="step-label">Rnd 1</div><div class="step-content"><div class="stitch-line">6sc en el anillo <span class="stitch-count">6 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 2</div><div class="step-content"><div class="stitch-line">6inc <span class="stitch-count">12 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 3</div><div class="step-content"><div class="stitch-line">[sc, inc] x 6 <span class="stitch-count">18 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 4</div><div class="step-content"><div class="stitch-line">sc, inc, [2sc, inc] x 5, sc <span class="stitch-count">24 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 5</div><div class="step-content"><div class="stitch-line">[3sc, inc] x 6 <span class="stitch-count">30 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 6</div><div class="step-content"><div class="stitch-line">2sc, inc, [4sc, inc] x 5, 2sc <span class="stitch-count">36 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 7</div><div class="step-content"><div class="stitch-line">[5sc, inc] x 6 <span class="stitch-count">42 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 8</div><div class="step-content"><div class="stitch-line">3sc, inc, [6sc, inc] x 5, 3sc <span class="stitch-count">48 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 9</div><div class="step-content"><div class="stitch-line">[7sc, inc] x 6 <span class="stitch-count">54 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 10</div><div class="step-content"><div class="stitch-line">4sc, inc, [8sc, inc] x 5, 4sc <span class="stitch-count">60 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 11</div><div class="step-content"><div class="stitch-line">[9sc, inc] x 6 <span class="stitch-count">66 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 12–18</div><div class="step-content"><div class="stitch-line">66sc <span class="stitch-count">66 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 19</div><div class="step-content">
+      <div class="stitch-line">Pon un marcador de punto en el lazo activo.</div>
+      <div class="explanation">Este marcador identifica el punto de referencia para adjuntar la cola.</div>
+    </div></div>
+    <div class="step"><div class="step-label">Adjuntar cola al cuerpo</div><div class="step-content">
+      <div class="stitch-line">Mete el alambre de la cola entre las Rnds 8 y 9, directamente debajo del primer punto de la vuelta. Con alicates, enrosca el extremo del alambre en una espiral y aplánala contra el tejido interior del cuerpo. Fija la cola con alfileres y cose en su lugar. Puedes doblarla en S mientras sigues trabajando.</div>
+    </div></div>
+    <div class="step"><div class="step-label">Rnds 19–25</div><div class="step-content"><div class="stitch-line">66sc <span class="stitch-count">66 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 26</div><div class="step-content"><div class="stitch-line">[21sc, inc] x 3 <span class="stitch-count">69 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 27–30</div><div class="step-content"><div class="stitch-line">69sc <span class="stitch-count">69 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 31</div><div class="step-content"><div class="stitch-line">11sc, inc, [22sc, inc] x 2, 11sc <span class="stitch-count">72 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 32–35</div><div class="step-content"><div class="stitch-line">72sc <span class="stitch-count">72 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 36</div><div class="step-content"><div class="stitch-line">2sc, inc, 4sc, inc, 24sc, [dec, 4sc] x 2, dec, 23sc, inc, 2sc <span class="stitch-count">72 pts</span></div><div class="explanation">Esta vuelta irregular da forma al lomo curvado y al vientre del animal.</div></div></div>
+    <div class="step"><div class="step-label">Rnds 37–41</div><div class="step-content"><div class="stitch-line">72sc <span class="stitch-count">72 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 42</div><div class="step-content"><div class="stitch-line">33sc, [dec, 4sc] x 2, dec, 25sc <span class="stitch-count">69 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 43–44</div><div class="step-content"><div class="stitch-line">69sc <span class="stitch-count">69 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 45</div><div class="step-content"><div class="stitch-line">[dec, 4sc] x 2, dec, 55sc <span class="stitch-count">66 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 46</div><div class="step-content"><div class="stitch-line">66sc <span class="stitch-count">66 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 47</div><div class="step-content"><div class="stitch-line">[dec, 4sc] x 2, dec, 18sc, [dec, 4sc] x 2, dec, 20sc <span class="stitch-count">60 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 48–50</div><div class="step-content"><div class="stitch-line">60sc <span class="stitch-count">60 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 51</div><div class="step-content"><div class="stitch-line">[dec, 4sc] x 2, dec, 15sc, [dec, 4sc] x 2, dec, 17sc <span class="stitch-count">54 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 52–55</div><div class="step-content"><div class="stitch-line">54sc <span class="stitch-count">54 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 56</div><div class="step-content"><div class="stitch-line">26sc, [dec, 4sc] x 2, dec, 14sc <span class="stitch-count">51 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 57–58</div><div class="step-content"><div class="stitch-line">51sc <span class="stitch-count">51 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 59</div><div class="step-content"><div class="stitch-line">25sc, [dec, 4sc] x 2, dec, 12sc <span class="stitch-count">48 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 60–61</div><div class="step-content"><div class="stitch-line">48sc <span class="stitch-count">48 pts</span></div></div></div>
+    <div class="warn-box"><div class="box-title">🔴 Empieza a rellenar el cuerpo firmemente ahora</div>Rellena con firmeza — tanta como puedas. Sigue rellenando mientras cierras las últimas vueltas.</div>
+    <div class="step"><div class="step-label">Rnd 62</div><div class="step-content"><div class="stitch-line">2sc, [dec, 4sc] x 2, dec, 9sc, [dec, 4sc] x 2, dec, 9sc <span class="stitch-count">42 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 63–68</div><div class="step-content"><div class="stitch-line">42sc <span class="stitch-count">42 pts</span></div></div></div>
+    <div class="note-box"><div class="box-title">✂️ Terminar</div>Remata dejando una punta larga para coser. Adjunta los tentáculos como indica la sección de armado.</div>
+    <div class="special-box">
+      <div class="box-title">🔩 Adjuntar los tentáculos al cuerpo</div>
+      Primero determina el centro de la espalda del cuello usando el centro de la cola como punto de referencia. Inserta un marcador de punto para identificar el área. Inserta el alambre de los tentáculos entre las Rnds 63 y 54, con aproximadamente 7 puntos entre los dos alambres. Con alicates, enrosca cada alambre en una espiral y aplánala contra el tejido interior del cuerpo. Fija los tentáculos con alfileres asegurándote de que las cabezas miren hacia la apertura del cuello. Cose en su lugar. Rellena los extremos de los tentáculos completamente mientras los coses.
+    </div>
+    <div class="tip-box"><div class="box-title">💡 Termina de rellenar el cuerpo</div>Rellena el cuerpo con tanta firmeza como sea posible, hasta el cuello.</div>
+  </div>
+
+  <!-- ==================== ARMADO FINAL ==================== -->
+  <div class="piece-header" style="margin-top:48px;">
+    <div class="piece-number">Paso Final</div>
+    <h2>🪡 Armado Final (Finishing Assembly)</h2>
+    <div class="subtitle">Cómo ensamblar todas las piezas en orden</div>
+  </div>
+  <div class="piece-body">
+    <div class="tip-box">
+      <div class="box-title">💡 Consejo general</div>
+      Usa MUCHOS alfileres antes de coser cualquier pieza. El Displacer Beast tiene una pose muy específica — las patas traseras salen hacia los lados, las delanteras hacia adelante, y el cuerpo se inclina ligeramente. Tómate el tiempo de ver la foto de referencia y replicar la postura con alfileres antes de coser nada de forma definitiva.
+    </div>
+
+    <div class="assembly-step">
+      <div class="assembly-number">1</div>
+      <div class="assembly-content">
+        <strong>Patas traseras.</strong> Pon el cuerpo en posición vertical, inclinado levemente hacia adelante para que la cola no quede aplastada. Presiona ligeramente la cadera (Haunch) contra el pie para que se incline hacia adelante un poco. Fija las patas traseras al cuerpo con la parte trasera de las caderas completamente aplanada contra el cuerpo, desde la parte de atrás del pie hasta el inicio de la cadera, a uno o dos puntos de cada lado de la cola. Deja el frente de las caderas sin fijar. Presiona las patas traseras contra el cuerpo y fija con alfileres. Usa la punta del hilo del pie trasero para coser la cadera y la pata en su lugar.
+      </div>
+    </div>
+
+    <div class="assembly-step">
+      <div class="assembly-number">2</div>
+      <div class="assembly-content">
+        <strong>Patas medias.</strong> Con el cuerpo apoyado sobre las patas traseras, presiona las patas medias contra el suelo y contra el pie trasero. Debe haber el menor espacio posible entre ambas. Presiona la parte superior de la pata media plana contra el cuerpo y fija con alfileres. Cose la pata media alrededor del hombro y pega la parte interna al cuerpo para que no se abra. Usa puntadas escondidas para mantener todo en posición.
+      </div>
+    </div>
+
+    <div class="assembly-step">
+      <div class="assembly-number">3</div>
+      <div class="assembly-content">
+        <strong>Patas delanteras.</strong> Fija las patas delanteras justo encima de las medias, con el hombro completamente aplanado contra el cuerpo. Cose solo alrededor de la curva trasera del hombro. Cada pie debe estar en una posición ligeramente diferente y levantada — como si la bestia estuviera a punto de saltar tras sus tentáculos. Si el pie quiere abrirse hacia afuera, puedes cosetearlo al cuerpo con una o dos puntadas escondidas.
+      </div>
+    </div>
+
+    <div class="assembly-step">
+      <div class="assembly-number">4</div>
+      <div class="assembly-content">
+        <strong>Adjuntar la cabeza al cuerpo.</strong> Asegúrate de rellenar bien el cuello mientras coses la cabeza al cuerpo — esto evita que la cabeza se caiga hacia adelante. La cabeza va ligeramente inclinada hacia adelante sobre el cuerpo.
+      </div>
+    </div>
+
+    <div class="note-box" style="margin-top:22px;">
+      <div class="box-title">🐆 ¡Tu Displacer Beast está listo!</div>
+      Con sus 6 patas, la cola articulada con alambre, los tentáculos posicionables y la expresión felina característica, tu Displacer Beast captura toda la esencia de esta criatura legendaria de D&D. ¡Es un trabajo increíble — felicidades!
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
