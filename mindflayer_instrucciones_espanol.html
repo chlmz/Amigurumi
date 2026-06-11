@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mind Flayer Amigurumi — Instrucciones Completas</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap');
+  :root {
+    --dark:#1a0a1e; --mid:#4a1a5e; --light:#7b3fa0;
+    --burgundy:#7a1a2e; --burg-light:#c0394a;
+    --plum:#b08ac0; --plum-light:#e0c8f0;
+    --gray:#6b6b7a; --gray-light:#c8c8d8;
+    --cream:#f5f0fa; --white:#ffffff;
+    --tip:#fff8ee; --tip-b:#c8934a;
+    --warn:#fff0f0; --warn-b:#c0392b;
+    --ok:#f0f7f0; --ok-b:#2e7d32;
+    --note:#f0f0ff; --note-b:#4a1a5e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Lato',sans-serif;font-weight:300;background:#f5f0fa;color:#1a0a1e;line-height:1.8;font-size:16px;}
+  header{background:var(--dark);color:var(--plum-light);padding:48px 24px 36px;text-align:center;border-bottom:5px solid var(--burgundy);}
+  header h1{font-family:'Playfair Display',serif;font-size:2.4rem;margin-bottom:8px;color:var(--plum-light);}
+  header p{color:var(--plum);font-size:1rem;}
+  .container{max-width:860px;margin:0 auto;padding:28px 20px 80px;}
+
+  .materials-box{background:var(--dark);color:var(--plum-light);border-radius:12px;padding:28px 32px;margin:32px 0;}
+  .materials-box h2{font-family:'Playfair Display',serif;color:var(--burg-light);font-size:1.2rem;margin-bottom:16px;text-transform:uppercase;letter-spacing:1px;}
+  .materials-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px 24px;}
+  .materials-grid li{list-style:none;padding-left:18px;position:relative;font-size:0.93rem;line-height:1.6;}
+  .materials-grid li::before{content:'▸';color:var(--burg-light);position:absolute;left:0;}
+  .color-dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:middle;border:1px solid rgba(255,255,255,0.2);}
+
+  .abbrev-table{width:100%;border-collapse:collapse;margin:18px 0 32px;font-size:0.92rem;}
+  .abbrev-table th{background:var(--mid);color:var(--plum-light);padding:10px 14px;text-align:left;font-weight:700;font-size:0.82rem;letter-spacing:0.5px;text-transform:uppercase;}
+  .abbrev-table td{padding:9px 14px;border-bottom:1px solid #ddd8e8;vertical-align:top;}
+  .abbrev-table tr:nth-child(even) td{background:#f0ebfa;}
+  .abbrev-table td:first-child{font-weight:700;color:var(--mid);white-space:nowrap;width:120px;}
+
+  .toc{background:white;border:1px solid #d8c8e8;border-radius:10px;padding:22px 28px;margin:28px 0;}
+  .toc h3{font-family:'Playfair Display',serif;color:var(--mid);margin-bottom:12px;font-size:1.1rem;}
+  .toc ol{padding-left:20px;}
+  .toc li{padding:3px 0;font-size:0.92rem;color:var(--mid);}
+  .toc li strong{color:var(--dark);}
+
+  .piece-header{background:var(--mid);color:var(--plum-light);padding:18px 24px;border-radius:10px 10px 0 0;margin-top:48px;}
+  .piece-number{font-size:0.75rem;color:var(--plum);text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;}
+  .piece-header h2{font-family:'Playfair Display',serif;font-size:1.5rem;}
+  .piece-header .subtitle{font-size:0.88rem;color:var(--plum-light);opacity:0.8;margin-top:4px;}
+  .piece-body{background:white;border:1px solid #d8c8e8;border-top:none;border-radius:0 0 10px 10px;padding:26px 28px 30px;}
+
+  .intro-p{background:var(--note);border-left:4px solid var(--note-b);border-radius:0 8px 8px 0;padding:13px 17px;margin-bottom:22px;font-size:0.96rem;color:#2a0a3a;font-style:italic;}
+
+  .step{display:flex;gap:14px;margin-bottom:13px;align-items:flex-start;}
+  .step-label{background:var(--light);color:white;font-weight:700;font-size:0.76rem;padding:3px 10px;border-radius:20px;white-space:nowrap;margin-top:3px;min-width:70px;text-align:center;letter-spacing:0.5px;}
+  .step-label.gray{background:var(--gray);}
+  .step-content{flex:1;}
+  .step-content .stitch-line{font-weight:700;color:var(--dark);font-size:0.98rem;}
+  .step-content .explanation{font-size:0.89rem;color:#4a2a5a;margin-top:3px;line-height:1.6;}
+  .stitch-count{display:inline-block;background:var(--dark);color:var(--plum-light);font-size:0.78rem;font-weight:700;padding:1px 8px;border-radius:10px;margin-left:6px;vertical-align:middle;}
+
+  .tip-box{background:var(--tip);border:1px solid var(--tip-b);border-left:4px solid var(--tip-b);border-radius:8px;padding:13px 17px;margin:16px 0;font-size:0.91rem;}
+  .warn-box{background:var(--warn);border:1px solid var(--warn-b);border-left:4px solid var(--warn-b);border-radius:8px;padding:13px 17px;margin:16px 0;font-size:0.91rem;}
+  .note-box{background:var(--ok);border:1px solid var(--ok-b);border-left:4px solid var(--ok-b);border-radius:8px;padding:13px 17px;margin:16px 0;font-size:0.91rem;}
+  .special-box{background:var(--note);border:1px solid var(--note-b);border-left:4px solid var(--note-b);border-radius:8px;padding:13px 17px;margin:16px 0;font-size:0.91rem;}
+  .box-title{font-weight:700;margin-bottom:4px;font-size:0.81rem;text-transform:uppercase;letter-spacing:0.5px;}
+  .tip-box .box-title{color:var(--mid);}
+  .warn-box .box-title{color:var(--warn-b);}
+  .note-box .box-title{color:#2e7d32;}
+  .special-box .box-title{color:var(--mid);}
+
+  .sub-section{margin-top:26px;padding-top:18px;border-top:1px solid #e0d0f0;}
+  .sub-section h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--mid);margin-bottom:12px;display:flex;align-items:center;gap:10px;}
+  .sub-section h3::after{content:'';flex:1;height:1px;background:#d0c0e0;}
+
+  .assembly-step{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start;}
+  .assembly-number{background:var(--burg-light);color:white;font-weight:700;font-size:1rem;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+  .assembly-content{flex:1;font-size:0.96rem;line-height:1.75;}
+
+  section-title{font-family:'Playfair Display',serif;color:var(--mid);font-size:1.15rem;margin-bottom:12px;display:block;}
+
+  @media(max-width:600px){
+    header h1{font-size:1.7rem;}
+    .materials-grid{grid-template-columns:1fr;}
+    .piece-body{padding:18px 16px 22px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div style="font-size:2.8rem;margin-bottom:10px;">🦑</div>
+  <h1>Mind Flayer (Illithid) Amigurumi</h1>
+  <p>Instrucciones completas paso a paso · Estilo tutorial en video</p>
+  <p style="margin-top:6px;font-size:0.82rem;color:#8060a0;">Diseño original: Alysia Sly · Nivel: Intermedio</p>
+</header>
+
+<div class="container">
+
+  <div class="intro-p" style="margin-top:28px;font-style:normal;font-size:1rem;">
+    ¡Hola! Vamos a hacer juntas este increíble Mind Flayer — la criatura con tentáculos de D&D. Como en el Osho-Búho, te explico cada paso como si estuviéramos sentadas lado a lado: qué hacer, cómo debe verse, y qué errores evitar. Este tiene técnicas nuevas interesantes — ¡los tentáculos se tejen directamente en la cabeza!
+  </div>
+
+  <!-- MATERIALES -->
+  <div class="materials-box">
+    <h2>🧶 Lo que necesitas</h2>
+    <ul class="materials-grid">
+      <li><span class="color-dot" style="background:#111111;"></span><strong>Color A</strong> — Negro (cuerpo base + túnica)</li>
+      <li><span class="color-dot" style="background:#b08ac0;"></span><strong>Color B</strong> — Ciruela pálida (cabeza + brazos)</li>
+      <li><span class="color-dot" style="background:#7a1a2e;"></span><strong>Color C</strong> — Borgoña (capa)</li>
+      <li><span class="color-dot" style="background:#6b6b7a;"></span><strong>Color D</strong> — Gris medio (cinturón + armadura)</li>
+      <li>Hilo de peso worsted #4 (acrílico 100%)</li>
+      <li>Aguja de crochet 3.75mm (tamaño F-5 USA)</li>
+      <li>Aguja de tapicería para coser piezas</li>
+      <li>Relleno de fibra (polyester fiberfill)</li>
+      <li>1 par de ojos de seguridad negros de 12mm</li>
+      <li>Marcadores de punto</li>
+      <li>Alfileres para fijar antes de coser</li>
+    </ul>
+  </div>
+
+  <!-- ABREVIACIONES -->
+  <h2 style="font-family:'Playfair Display',serif;color:var(--mid);margin-bottom:12px;font-size:1.15rem;text-transform:uppercase;letter-spacing:1px;">Abreviaciones</h2>
+  <table class="abbrev-table">
+    <tr><th>Abreviación</th><th>Significado</th><th>Qué haces exactamente</th></tr>
+    <tr><td>sc</td><td>Punto bajo</td><td>El punto básico del amigurumi. Insertas, tomas hilo, sacas por 2 lazadas.</td></tr>
+    <tr><td>inc</td><td>Aumento</td><td>2sc en el mismo punto. La pieza se agranda.</td></tr>
+    <tr><td>dec</td><td>Disminución invisible</td><td>Solo por los lazos delanteros de 2 puntos consecutivos, luego cierra.</td></tr>
+    <tr><td>slst</td><td>Punto deslizado</td><td>Insertas y sacas el hilo por todo de una vez. No da altura.</td></tr>
+    <tr><td>ch</td><td>Cadena / punto al aire</td><td>Sin insertar en ningún punto, solo tomas hilo y sacas por el lazo.</td></tr>
+    <tr><td>blo</td><td>Solo lazo trasero</td><td>Insertas la aguja solo por el lazo de atrás del punto.</td></tr>
+    <tr><td>flo</td><td>Solo lazo delantero</td><td>Insertas la aguja solo por el lazo de adelante del punto.</td></tr>
+    <tr><td>surface slst</td><td>Punto deslizado en superficie</td><td>Insertas la aguja directamente en la superficie del tejido (no en el borde) para crear una línea visible. Como "bordar" con la aguja de crochet.</td></tr>
+    <tr><td>rnd</td><td>Vuelta (en espiral)</td><td>Una vuelta completa en espiral continua — sin cerrar con slst.</td></tr>
+    <tr><td>row / fila</td><td>Fila (de un lado al otro)</td><td>Tejes de un extremo al otro, luego ch1 y giras para volver.</td></tr>
+    <tr><td>[ ] x N</td><td>Repetir N veces</td><td>Repite todo lo que está dentro de los corchetes N veces seguidas.</td></tr>
+    <tr><td>( ) mismo espacio</td><td>En el mismo punto</td><td>Los puntos entre paréntesis van todos en el mismo espacio.</td></tr>
+  </table>
+
+  <div class="special-box">
+    <div class="box-title">📌 Nota importante sobre este patrón</div>
+    El proyecto se trabaja principalmente en punto bajo (sc) en estilo amigurumi. La Capa se trabaja por separado y se cose al final. Los puntos entre paréntesis van en el mismo espacio.
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>📋 Orden de tejido</h3>
+    <ol>
+      <li><strong>Head (Cabeza)</strong> — Color B, con tentáculos integrados</li>
+      <li><strong>Head Details (Detalles de la cabeza)</strong> — cejas bordadas</li>
+      <li><strong>Arms (Brazos)</strong> — Color B, hacer 2</li>
+      <li><strong>Body Base (Base del cuerpo)</strong> — Color A</li>
+      <li><strong>Body Robe (Túnica)</strong> — Color A, se teje desde la base</li>
+      <li><strong>Belt (Cinturón)</strong> — Color D, surface slst</li>
+      <li><strong>Chest and Shoulder Armor (Armadura)</strong> — Color D</li>
+      <li><strong>Cape Top (Parte superior de la capa)</strong> — Color C</li>
+      <li><strong>Cape Bottom (Parte inferior de la capa)</strong> — Color C</li>
+      <li><strong>Assembly (Armado)</strong></li>
+    </ol>
+  </div>
+
+  <!-- ==================== PIEZA 1: HEAD ==================== -->
+  <div class="piece-header">
+    <div class="piece-number">Pieza 1 de 9</div>
+    <h2>🦑 Cabeza (Head)</h2>
+    <div class="subtitle">Con Color B — Ciruela pálida</div>
+  </div>
+  <div class="piece-body">
+    <div class="intro-p">
+      La cabeza es la pieza más especial de este amigurumi: los 4 tentáculos se crean directamente dentro de la vuelta 13, sin tejer piezas separadas. Trabajas en espiral continua de abajo hacia arriba. Los ojos de seguridad van entre las vueltas 11 y 12.
+    </div>
+
+    <div class="step"><div class="step-label">INICIO</div><div class="step-content"><div class="stitch-line">Con Color B, haz un anillo mágico.</div></div></div>
+    <div class="step"><div class="step-label">Rnd 1</div><div class="step-content"><div class="stitch-line">6sc dentro del anillo <span class="stitch-count">6 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 2</div><div class="step-content"><div class="stitch-line">6inc <span class="stitch-count">12 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 3</div><div class="step-content"><div class="stitch-line">[sc, inc] x 6 <span class="stitch-count">18 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 4</div><div class="step-content"><div class="stitch-line">[2sc, inc] x 6 <span class="stitch-count">24 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 5</div><div class="step-content"><div class="stitch-line">[3sc, inc] x 6 <span class="stitch-count">30 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 6</div><div class="step-content"><div class="stitch-line">[4sc, inc] x 6 <span class="stitch-count">36 pts</span></div></div></div>
+
+    <div class="step"><div class="step-label">Rnd 7</div><div class="step-content">
+      <div class="stitch-line">4sc, [dec, sc] x 4, 20sc <span class="stitch-count">32 pts</span></div>
+      <div class="explanation">La cabeza empieza a estrecharse en la zona donde irán los ojos. Las 4 disminuciones están agrupadas al frente.</div>
+    </div></div>
+
+    <div class="step"><div class="step-label">Rnd 8</div><div class="step-content">
+      <div class="stitch-line">4sc, dec, 8sc, dec, 16sc <span class="stitch-count">30 pts</span></div>
+    </div></div>
+
+    <div class="step"><div class="step-label">Rnd 9</div><div class="step-content"><div class="stitch-line">[3sc, dec] x 6 <span class="stitch-count">24 pts</span></div></div></div>
+
+    <div class="step"><div class="step-label">Rnds 10–12</div><div class="step-content">
+      <div class="stitch-line">24sc en cada vuelta <span class="stitch-count">24 pts</span></div>
+      <div class="explanation">Tres vueltas rectas. Esta zona es el "cuello" de la cabeza que se insertará en el cuerpo.</div>
+    </div></div>
+
+    <div class="warn-box">
+      <div class="box-title">🔴 ¡PON LOS OJOS ANTES DE CONTINUAR!</div>
+      Coloca los ojos de seguridad negros de 12mm entre las vueltas 11 y 12, con 5 espacios entre ellos. Después de la vuelta 13, ya no podrás meter la mano. ¡Hazlo ahora! Luego rellena la cabeza con firmeza media con fiberfill.
+    </div>
+
+    <div class="step"><div class="step-label">Rnd 13</div><div class="step-content">
+      <div class="stitch-line">6sc, [sc flo, ch12, empezando en el 2do ch desde la aguja: (inc, sc) x 4, 3sc, sc flo, 13sc] <span class="stitch-count">24 pts</span></div>
+      <div class="explanation">¡Esta vuelta crea los 4 tentáculos! Funciona así: tejes 6sc normales, luego en el siguiente punto haces un sc solo por el lazo delantero (flo), lanzas una cadena de 12, tejes de regreso por esa cadena haciendo los aumentos y puntos indicados — eso forma UN tentáculo. Luego un sc flo más y 13sc normales para terminar la vuelta. El tentáculo sale de los puntos flo y cuelga hacia abajo. Repite este proceso 4 veces en total (una vez por tentáculo).</div>
+    </div></div>
+
+    <div class="tip-box">
+      <div class="box-title">💡 Los tentáculos explicados paso a paso</div>
+      Para cada tentáculo: (1) haz sc flo en el punto indicado, (2) haz ch12, (3) en el 2do ch desde la aguja empieza: inc, sc, inc, sc, inc, sc, inc, sc (eso son los 4 pares inc+sc), (4) luego 3sc más, (5) sc flo en el punto siguiente del anillo principal. El tentáculo se enrosca naturalmente hacia afuera. Si no se enrosca, asegúrate de estar tensando bien los puntos.
+    </div>
+
+    <div class="step"><div class="step-label">Rnd 14</div><div class="step-content">
+      <div class="stitch-line">24sc — los sc detrás de los tentáculos van en los lazos traseros sin usar de la vuelta anterior <span class="stitch-count">24 pts</span></div>
+      <div class="explanation">Cuando llegues a los puntos donde están los tentáculos, inserta la aguja en el lazo trasero que quedó sin usar en la vuelta 13 (el lazo de atrás que dejaste libre al hacer el sc flo). Así el tejido principal sigue su curso.</div>
+    </div></div>
+
+    <div class="step"><div class="step-label">Rnd 15</div><div class="step-content"><div class="stitch-line">[sc, dec] x 8 <span class="stitch-count">16 pts</span></div></div></div>
+
+    <div class="step"><div class="step-label">Rnd 16</div><div class="step-content">
+      <div class="stitch-line">[dec] x 8 <span class="stitch-count">8 pts</span></div>
+      <div class="explanation">Cierra la parte inferior de la cabeza. Corta dejando una punta, pásala por los últimos 8 puntos con la aguja de tapicería y cierra. Esta apertura es la que se une al cuerpo.</div>
+    </div></div>
+
+    <div class="note-box">
+      <div class="box-title">✅ Cómo debe verse la cabeza terminada</div>
+      Una cabeza ovalada color ciruela con 4 tentáculos que cuelgan y se enroscan en la parte inferior. Los ojos negros quedan bien hundidos y con expresión seria. La parte de abajo tiene una apertura donde irá el cuerpo.
+    </div>
+  </div>
+
+  <!-- ==================== PIEZA 2: HEAD DETAILS ==================== -->
+  <div class="piece-header">
+    <div class="piece-number">Pieza 2 de 9</div>
+    <h2>✏️ Detalles de la Cabeza (Head Details)</h2>
+    <div class="subtitle">Con Color B — Ciruela pálida · Bordado</div>
+  </div>
+  <div class="piece-body">
+    <div class="intro-p">
+      Estos detalles se bordan directamente sobre la cabeza ya terminada — no son piezas separadas. Le dan al Mind Flayer su expresión característica de ceño fruncido.
+    </div>
+
+    <div class="step">
+      <div class="step-label">CEJAS</div>
+      <div class="step-content">
+        <div class="stitch-line">Con Color B, borda las cejas justo encima de los ojos, entre las vueltas 9 y 11.</div>
+        <div class="explanation">Usa la aguja de tapicería con hilo B. Haz puntadas largas diagonales inclinadas hacia abajo en el centro — esto crea la expresión "enojada" característica del Mind Flayer. La ceja izquierda baja hacia la derecha, la derecha baja hacia la izquierda, formando una "V" invertida sobre la nariz.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-label">OJOS (Opcional)</div>
+      <div class="step-content">
+        <div class="stitch-line">Para hundir los ojos: usa la punta del hilo sobrante para coser de ida y vuelta alrededor del borde exterior de cada ojo y jala con firmeza.</div>
+        <div class="explanation">Esto crea el efecto de ojos hundidos y más intensos. Jala gradualmente — no de golpe — hasta que queden a la profundidad que te guste. No es obligatorio pero mejora mucho la expresión.</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="box-title">💡 La expresión correcta</div>
+      Vista de frente, el Mind Flayer debe tener un ceño permanentemente fruncido y mirada intimidante. Las cejas en diagonal hacia abajo al centro son clave para lograr esto.
+    </div>
+  </div>
+
+  <!-- ==================== PIEZA 3: ARMS ==================== -->
+  <div class="piece-header">
+    <div class="piece-number">Pieza 3 de 9</div>
+    <h2>💜 Brazos (Arms)</h2>
+    <div class="subtitle">Con Color B — Ciruela pálida · Hacer 2 iguales</div>
+  </div>
+  <div class="piece-body">
+    <div class="intro-p">
+      Los brazos son pequeños pero tienen una técnica especial: las "manos" con dedos se crean en la vuelta 2 usando cadenas cortas. Los brazos tienen también franjas de color intercaladas usando blo y slst — eso crea el efecto de "anillos" en el brazo como la piel texturizada del Mind Flayer.
+    </div>
+
+    <div class="step"><div class="step-label">INICIO</div><div class="step-content"><div class="stitch-line">Con Color B, haz un anillo mágico.</div></div></div>
+    <div class="step"><div class="step-label">Rnd 1</div><div class="step-content"><div class="stitch-line">6sc dentro del anillo <span class="stitch-count">6 pts</span></div></div></div>
+
+    <div class="step"><div class="step-label">Rnd 2</div><div class="step-content">
+      <div class="stitch-line">sc, [sc (ch5, empezando en el 2do ch desde la aguja: 2slst, 2sc)] x 4, sc <span class="stitch-count">6 pts</span></div>
+      <div class="explanation">¡Esta vuelta crea los dedos! Para cada dedo: haz un sc en el punto del anillo, luego lanza ch5, y tejiendo de regreso por esa cadena: 2slst (los dos primeros puntos, muy bajos y planos), luego 2sc (los siguientes, un poco más altos). Repites esto 4 veces para 4 dedos. El sc del final va en el último punto.</div>
+    </div></div>
+
+    <div class="step"><div class="step-label">Rnd 3</div><div class="step-content">
+      <div class="stitch-line">6sc blo <span class="stitch-count">6 pts</span></div>
+      <div class="explanation">Solo por el lazo trasero. Esto deja los lazos delanteros libres que crearán la textura de "anillo".</div>
+    </div></div>
+
+    <div class="step"><div class="step-label">Rnd 4</div><div class="step-content"><div class="stitch-line">[sc, inc] x 3 <span class="stitch-count">9 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 5</div><div class="step-content"><div class="stitch-line">9sc <span class="stitch-count">9 pts</span></div></div></div>
+
+    <div class="step"><div class="step-label">Rnd 6 — CAMBIO A COLOR D</div><div class="step-content">
+      <div class="stitch-line">9slst con Color D <span class="stitch-count">9 pts</span></div>
+      <div class="explanation">Cambia a Color D (gris) y haz 9 puntos deslizados. Esta vuelta "plana" de slst es la base sobre la que se apoya la siguiente vuelta para crear el efecto de franja.</div>
+    </div></div>
+
+    <div class="step"><div class="step-label">Rnd 7</div><div class="step-content">
+      <div class="stitch-line">sc en cada punto trabajando a través del blo del slst de la vuelta anterior Y del sc de la vuelta 5 <span class="stitch-count">9 pts</span></div>
+      <div class="explanation">Esta es la técnica de "franja". Insertas la aguja por DOS capas al mismo tiempo: el lazo trasero del slst que acabas de hacer (vuelta 6) Y el punto sc que está debajo (vuelta 5). Esto "atrapa" la franja gris y crea el relieve visual. Tómate el tiempo de identificar bien ambos lazos antes de insertar.</div>
+    </div></div>
+
+    <div class="step"><div class="step-label">Rnd 8 — CAMBIO A COLOR A</div><div class="step-content">
+      <div class="stitch-line">9slst con Color A <span class="stitch-count">9 pts</span></div>
+      <div class="explanation">Mismo proceso — cambia a negro y haz una vuelta de slst.</div>
+    </div></div>
+
+    <div class="step"><div class="step-label">Rnd 9</div><div class="step-content">
+      <div class="stitch-line">sc en cada punto trabajando a través del blo del slst de la vuelta 8 Y del sc de la vuelta 7 <span class="stitch-count">9 pts</span></div>
+      <div class="explanation">Misma técnica de doble capa. Ahora tienes franja negra.</div>
+    </div></div>
+
+    <div class="step"><div class="step-label">Rnds 10–14</div><div class="step-content">
+      <div class="stitch-line">9sc <span class="stitch-count">9 pts</span></div>
+      <div class="explanation">5 vueltas rectas. El brazo toma su longitud aquí. Rellena con firmeza media.</div>
+    </div></div>
+
+    <div class="step"><div class="step-label">Rnd 15</div><div class="step-content">
+      <div class="stitch-line">Dobla el brazo por la mitad y haz 4sc a través de los dos lados al mismo tiempo para cerrar <span class="stitch-count">4 pts</span></div>
+      <div class="explanation">Aplasta el brazo de manera que quede plano, con la mano en un extremo. Inserta la aguja pasando por el punto del lado de adelante Y el del lado de atrás al mismo tiempo. Haz 4sc así — esto cierra el brazo y le da forma ligeramente aplanada en la parte superior para facilitar la costura al cuerpo.</div>
+    </div></div>
+
+    <div class="note-box">
+      <div class="box-title">✂️ Terminar</div>
+      Corta dejando una punta larga para coser al cuerpo. Hacer 2 brazos iguales.
+    </div>
+  </div>
+
+  <!-- ==================== PIEZA 4: BODY BASE ==================== -->
+  <div class="piece-header">
+    <div class="piece-number">Pieza 4 de 9</div>
+    <h2>🖤 Base del Cuerpo (Body Base)</h2>
+    <div class="subtitle">Con Color A — Negro</div>
+  </div>
+  <div class="piece-body">
+    <div class="intro-p">
+      El cuerpo base es un cilindro que forma el torso del Mind Flayer. Empieza con una cadena unida en círculo — diferente al anillo mágico. La vuelta 12 se hace en blo porque esos lazos delanteros libres serán donde se engancha la túnica (Body Robe) más adelante.
+    </div>
+
+    <div class="step"><div class="step-label">INICIO</div><div class="step-content">
+      <div class="stitch-line">Con Color A, haz una cadena de 12 puntos (ch12).</div>
+      <div class="explanation">Cuenta bien los 12 puntos antes de unir.</div>
+    </div></div>
+
+    <div class="step"><div class="step-label">Rnd 1</div><div class="step-content">
+      <div class="stitch-line">Une la cadena en un círculo haciendo sc en el primer punto de la cadena. Luego sc en los puntos restantes de la cadena. <span class="stitch-count">12 pts</span></div>
+      <div class="explanation">Para unir: inserta la aguja en el primer punto de la cadena (el que está más lejos de la aguja), toma hilo y haz el sc normalmente. Esto une la cadena en un aro y ese sc cuenta como el primer punto de la vuelta. Continúa con sc en los 11 puntos restantes de la cadena.</div>
+    </div></div>
+
+    <div class="step"><div class="step-label">Rnds 2–3</div><div class="step-content"><div class="stitch-line">12sc en cada vuelta <span class="stitch-count">12 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 4</div><div class="step-content"><div class="stitch-line">[sc, inc] x 6 <span class="stitch-count">18 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 5–7</div><div class="step-content"><div class="stitch-line">18sc en cada vuelta <span class="stitch-count">18 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 8</div><div class="step-content"><div class="stitch-line">[8sc, inc] x 2 <span class="stitch-count">20 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 9</div><div class="step-content"><div class="stitch-line">20sc <span class="stitch-count">20 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 10</div><div class="step-content"><div class="stitch-line">[9sc, inc] x 2 <span class="stitch-count">22 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 11</div><div class="step-content"><div class="stitch-line">22sc <span class="stitch-count">22 pts</span></div></div></div>
+
+    <div class="step"><div class="step-label">Rnd 12</div><div class="step-content">
+      <div class="stitch-line">blo [10sc, inc] x 2 <span class="stitch-count">24 pts</span></div>
+      <div class="explanation">¡Importante! Esta vuelta entera se hace solo por el lazo trasero (blo). Los lazos delanteros que quedan libres son donde vas a enganchar la túnica (Body Robe) más adelante. Marca esta vuelta con un marcador de color diferente para encontrarla fácilmente después.</div>
+    </div></div>
+
+    <div class="step"><div class="step-label">Rnd 13</div><div class="step-content"><div class="stitch-line">24sc <span class="stitch-count">24 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 14</div><div class="step-content"><div class="stitch-line">[11sc, inc] x 2 <span class="stitch-count">26 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 15–16</div><div class="step-content"><div class="stitch-line">26sc <span class="stitch-count">26 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 17</div><div class="step-content"><div class="stitch-line">[12sc, inc] x 2 <span class="stitch-count">28 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 18–19</div><div class="step-content"><div class="stitch-line">28sc <span class="stitch-count">28 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 20</div><div class="step-content"><div class="stitch-line">[13sc, inc] x 2 <span class="stitch-count">30 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnds 21–22</div><div class="step-content"><div class="stitch-line">30sc <span class="stitch-count">30 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 23</div><div class="step-content">
+      <div class="stitch-line">blo [3sc, dec] x 6 <span class="stitch-count">24 pts</span></div>
+      <div class="explanation">Otra vuelta en blo. Aquí empieza a cerrarse la parte de abajo del cuerpo. ¡Rellena con firmeza media ahora!</div>
+    </div></div>
+
+    <div class="warn-box">
+      <div class="box-title">🔴 Rellena el cuerpo AHORA</div>
+      Antes de seguir cerrando, mete bien el fiberfill. El cuerpo debe quedar firme pero no tan apretado que los puntos se separen. Este es el momento — después de la vuelta 25 ya no podrás rellenar bien.
+    </div>
+
+    <div class="step"><div class="step-label">Rnd 24</div><div class="step-content"><div class="stitch-line">[2sc, dec] x 6 <span class="stitch-count">18 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 25</div><div class="step-content"><div class="stitch-line">[sc, dec] x 6 <span class="stitch-count">12 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Rnd 26</div><div class="step-content">
+      <div class="stitch-line">6dec <span class="stitch-count">6 pts</span></div>
+      <div class="explanation">Corta dejando una punta. Cierra los últimos 6 puntos con la aguja de tapicería y remata dentro de la pieza.</div>
+    </div></div>
+  </div>
+
+  <!-- ==================== PIEZA 5: BODY ROBE ==================== -->
+  <div class="piece-header">
+    <div class="piece-number">Pieza 5 de 9</div>
+    <h2>🖤 Túnica del Cuerpo (Body Robe)</h2>
+    <div class="subtitle">Con Color A — Negro · Se teje desde el Body Base</div>
+  </div>
+  <div class="piece-body">
+    <div class="intro-p">
+      La túnica no es una pieza separada — se teje directamente desde el Body Base, usando los lazos delanteros libres que dejaste en la vuelta 12 del blo. La túnica se abre hacia abajo como una campana, cubriendo el cuerpo. Se trabaja en filas (de un lado al otro), no en espiral.
+    </div>
+
+    <div class="special-box">
+      <div class="box-title">⚙️ Cómo empezar la túnica</div>
+      Voltea el Body Base boca abajo (con la parte de arriba hacia abajo). Engancha Color A al último punto de la vuelta 12. La primera fila se trabaja en los espacios de lazos delanteros abiertos que dejaste en esa vuelta. La punta de la aguja debe apuntar hacia el fondo del cuerpo.
+    </div>
+
+    <div class="step"><div class="step-label">Fila 1</div><div class="step-content">
+      <div class="stitch-line">5sc, inc, 10sc, inc, 5sc, ch1 y gira <span class="stitch-count">24 pts</span></div>
+      <div class="explanation">Tejes en los lazos delanteros libres de la vuelta 12. Los aumentos van a los lados para que la túnica empiece a abrirse.</div>
+    </div></div>
+
+    <div class="step"><div class="step-label">Fila 2</div><div class="step-content"><div class="stitch-line">6sc, inc, 10sc, inc, 6sc, ch1 y gira <span class="stitch-count">26 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 3</div><div class="step-content"><div class="stitch-line">26sc, ch1 y gira <span class="stitch-count">26 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 4</div><div class="step-content"><div class="stitch-line">7sc, inc, 10sc, inc, 7sc, ch1 y gira <span class="stitch-count">28 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 5</div><div class="step-content"><div class="stitch-line">28sc, ch1 y gira <span class="stitch-count">28 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 6</div><div class="step-content"><div class="stitch-line">8sc, inc, 10sc, inc, 8sc, ch1 y gira <span class="stitch-count">30 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Filas 7–8</div><div class="step-content"><div class="stitch-line">30sc, ch1 y gira <span class="stitch-count">30 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 9</div><div class="step-content"><div class="stitch-line">9sc, inc, 10sc, inc, 9sc, ch1 y gira <span class="stitch-count">32 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 10</div><div class="step-content"><div class="stitch-line">32sc, ch1 y gira <span class="stitch-count">32 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 11</div><div class="step-content"><div class="stitch-line">dec, 28sc, dec, ch1 y gira <span class="stitch-count">30 pts</span></div></div></div>
+
+    <div class="step"><div class="step-label">Fila 12</div><div class="step-content">
+      <div class="stitch-line">Trabajando en los sc de la Fila 11 Y en los espacios de lazos delanteros abiertos de la Vuelta 23 del Body Base: [4sc, en el 5to espacio inserta la aguja en el mismo lazo delantero del último punto Y en el siguiente punto de la Fila 11] x 6, ch1 y gira. Deben quedar 6 espacios de lazos delanteros sin trabajar. <span class="stitch-count">30 pts</span></div>
+      <div class="explanation">Esta es la fila más técnica. Estás uniendo la túnica con el cuerpo base al mismo tiempo que tejes. Para el punto de unión especial: tu aguja entra por DOS lugares al mismo tiempo — el lazo delantero del cuerpo base (vuelta 23) y el punto normal de la fila 11 de la túnica. Es un poco complicado, tómate tu tiempo y usa la punta de la aguja para alinear bien los dos lazos.</div>
+    </div></div>
+
+    <div class="step"><div class="step-label">Fila 13</div><div class="step-content">
+      <div class="stitch-line">[4sc, inc] x 6, remata con punta corta <span class="stitch-count">36 pts</span></div>
+    </div></div>
+
+    <div class="step"><div class="step-label">Fila 14</div><div class="step-content">
+      <div class="stitch-line">Engancha Color D al sc inicial de la Fila 13. [inc, 5sc] x 6, ch1 y no gires <span class="stitch-count">42 pts</span></div>
+      <div class="explanation">Engancha el nuevo color D (gris) con un slst al primer sc de la fila 13. Esta fila abre el vuelo de la túnica.</div>
+    </div></div>
+
+    <div class="step"><div class="step-label">Fila 15</div><div class="step-content">
+      <div class="stitch-line">Trabajando hacia arriba por el lado de la túnica: sc ~13 puntos. 2sc en los lazos delanteros del cuerpo base (al lado de los sc de la Fila 1 que ya están ahí). Bajando por el otro lado de la túnica: sc ~13 puntos. slst al sc inicial de la Fila 14. Remata. <span class="stitch-count">~28 pts</span></div>
+      <div class="explanation">Esta fila borda el borde abierto de la túnica en ambos lados. El número de sc es aproximado — lo que importa es que el borde quede parejo. Los ~13sc de cada lado suben/bajan por los extremos laterales de las filas de la túnica, insertando en las cabeceras de cada fila.</div>
+    </div></div>
+
+    <div class="note-box">
+      <div class="box-title">✅ Cómo debe verse la túnica terminada</div>
+      Una túnica negra acampanada que sale del torso del cuerpo base, con el vuelo abriéndose hacia abajo. La abertura frontal queda entre los dos lados — el Mind Flayer tiene una "abertura" de túnica al frente como una toga.
+    </div>
+  </div>
+
+  <!-- ==================== PIEZA 6: BELT ==================== -->
+  <div class="piece-header">
+    <div class="piece-number">Pieza 6 de 9</div>
+    <h2>⚔️ Cinturón (Belt)</h2>
+    <div class="subtitle">Con Color D — Gris medio · Surface slip stitch</div>
+  </div>
+  <div class="piece-body">
+    <div class="intro-p">
+      El cinturón es una línea de puntos deslizados en superficie — es decir, no tejes en los bordes ni abres nuevas vueltas, sino que insertas la aguja directamente EN la superficie del tejido ya hecho para crear una línea visible. Es como "dibujar" con la aguja de crochet.
+    </div>
+
+    <div class="special-box">
+      <div class="box-title">🎯 Qué es el surface slip stitch (surface slst)</div>
+      Inserta la aguja de crochet directamente en la superficie del tejido (no en los bordes ni en las cadenas — sino atravesando la tela). Engancha el hilo y sácalo por el tejido Y por el lazo de la aguja en un solo movimiento. Deja una línea de puntos visible en la superficie. Practica en un retazo antes si nunca lo has hecho.
+    </div>
+
+    <div class="step">
+      <div class="step-label">INICIO</div>
+      <div class="step-content">
+        <div class="stitch-line">Con Color D, inserta la aguja entre las Filas 12 y 13 de la Body Robe y haz surface slst alrededor de todo el cuerpo.</div>
+        <div class="explanation">Empieza en la costura lateral o en un punto discreto. Mantén una tensión consistente para que la línea del cinturón quede pareja y uniforme. El cinturón hace una vuelta completa alrededor del cuerpo a esa altura.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-label">REMATE</div>
+      <div class="step-content">
+        <div class="stitch-line">Los surface slst encima de la abertura central de la túnica se trabajan a través de los espacios de sc en Color D que están en la parte superior de la abertura. Remata y esconde las puntas.</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="box-title">💡 Tensión del cinturón</div>
+      Si el surface slst queda muy apretado, el tejido se fruncirá. Si queda muy suelto, la línea se ve irregular. Apunta a una tensión media — la línea debe quedar visible pero sin tensar el tejido de abajo.
+    </div>
+  </div>
+
+  <!-- ==================== PIEZA 7: CHEST AND SHOULDER ARMOR ==================== -->
+  <div class="piece-header">
+    <div class="piece-number">Pieza 7 de 9</div>
+    <h2>🛡️ Armadura de Pecho y Hombros (Chest and Shoulder Armor)</h2>
+    <div class="subtitle">Con Color D — Gris medio</div>
+  </div>
+  <div class="piece-body">
+    <div class="intro-p">
+      La armadura es una pieza plana en forma de "W" — tiene un punto central que va sobre el pecho y dos puntos laterales que van sobre los hombros/brazos. Se teje en filas con un patrón que alterna aumentos y disminuciones para crear los tres picos. Se conecta en loop al final.
+    </div>
+
+    <div class="step"><div class="step-label">INICIO</div><div class="step-content"><div class="stitch-line">Con Color D, haz una cadena de 3 puntos (ch3).</div></div></div>
+
+    <div class="step"><div class="step-label">Fila 1</div><div class="step-content">
+      <div class="stitch-line">Empezando en el 2do punto desde la aguja: 2sc, ch1 y gira <span class="stitch-count">2 pts</span></div>
+    </div></div>
+    <div class="step"><div class="step-label">Fila 2</div><div class="step-content"><div class="stitch-line">2sc, ch2 y gira <span class="stitch-count">2 pts</span></div></div></div>
+
+    <div class="step"><div class="step-label">Fila 3</div><div class="step-content">
+      <div class="stitch-line">Empezando en el 2do punto desde la aguja: 3sc, ch1 y gira <span class="stitch-count">3 pts</span></div>
+      <div class="explanation">La ch2 de la fila anterior actúa como extensión — tejes en esos 2 puntos de cadena más el punto de abajo.</div>
+    </div></div>
+    <div class="step"><div class="step-label">Fila 4</div><div class="step-content"><div class="stitch-line">3sc, ch2 y gira <span class="stitch-count">3 pts</span></div></div></div>
+
+    <div class="step"><div class="step-label">Fila 5</div><div class="step-content">
+      <div class="stitch-line">Empezando en el 2do punto desde la aguja: 4sc, ch1 y gira <span class="stitch-count">4 pts</span></div>
+    </div></div>
+
+    <div class="step"><div class="step-label">Fila 6</div><div class="step-content">
+      <div class="stitch-line">3sc, ch1 y gira — NO hagas punto en el último espacio <span class="stitch-count">3 pts</span></div>
+      <div class="explanation">Aquí empieza la disminución. Dejas el último espacio sin trabajar, eso crea el pico lateral.</div>
+    </div></div>
+    <div class="step"><div class="step-label">Fila 7</div><div class="step-content"><div class="stitch-line">3sc, ch1 y gira <span class="stitch-count">3 pts</span></div></div></div>
+
+    <div class="step"><div class="step-label">Fila 8</div><div class="step-content">
+      <div class="stitch-line">2sc, ch1 y gira — NO hagas punto en el último espacio <span class="stitch-count">2 pts</span></div>
+    </div></div>
+    <div class="step"><div class="step-label">Fila 9</div><div class="step-content"><div class="stitch-line">2sc, ch1 y gira <span class="stitch-count">2 pts</span></div></div></div>
+
+    <div class="step"><div class="step-label">Filas 10–25</div><div class="step-content">
+      <div class="stitch-line">Repite las Filas 2–9 dos veces más.</div>
+      <div class="explanation">Esto crea los tres picos de la armadura — el central (pecho) y los dos laterales (hombros). El patrón de crecer con ch2 y decrecer dejando el último espacio sin trabajar se repite para cada pico.</div>
+    </div></div>
+
+    <div class="note-box">
+      <div class="box-title">✂️ Terminar</div>
+      Remata dejando una punta larga. Las dos filas de 2sc del inicio y del final se conectarán juntas para formar un loop — la armadura rodea el pecho y los hombros.
+    </div>
+
+    <div class="tip-box">
+      <div class="box-title">💡 Cómo debe verse la armadura terminada</div>
+      Una tira larga con tres picos sobresalientes en forma de "W". El pico central irá en el frente del pecho; los dos picos laterales irán encima de los brazos. Cuando conectas los extremos, forma un collar/pechera en loop.
+    </div>
+  </div>
+
+  <!-- ==================== PIEZA 8: CAPE TOP ==================== -->
+  <div class="piece-header">
+    <div class="piece-number">Pieza 8 de 9</div>
+    <h2>🔴 Parte Superior de la Capa (Cape Top)</h2>
+    <div class="subtitle">Con Color C — Borgoña</div>
+  </div>
+  <div class="piece-body">
+    <div class="intro-p">
+      La capa tiene dos partes: la superior (Cape Top) que va detrás de la cabeza formando el cuello/capucha, y la inferior (Cape Bottom) que forma el cuerpo de la capa. El Cape Top se teje primero; luego el Cape Bottom se engancha directamente a la cadena inicial del Cape Top.
+    </div>
+
+    <div class="step"><div class="step-label">INICIO</div><div class="step-content"><div class="stitch-line">Con Color C, haz una cadena de 7 puntos (ch7).</div></div></div>
+
+    <div class="step"><div class="step-label">Fila 1</div><div class="step-content"><div class="stitch-line">Empezando en el 2do punto desde la aguja: 6sc, ch1 y gira <span class="stitch-count">6 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 2</div><div class="step-content"><div class="stitch-line">[2sc, inc] x 2, ch1 y gira <span class="stitch-count">8 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 3</div><div class="step-content"><div class="stitch-line">[3sc, inc] x 2, ch1 y gira <span class="stitch-count">10 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 4</div><div class="step-content"><div class="stitch-line">10sc, ch1 y gira <span class="stitch-count">10 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 5</div><div class="step-content"><div class="stitch-line">[4sc, inc] x 2, ch1 y gira <span class="stitch-count">12 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 6</div><div class="step-content"><div class="stitch-line">[5sc, inc] x 2, ch1 y gira <span class="stitch-count">14 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 7</div><div class="step-content"><div class="stitch-line">14sc, ch1 y gira <span class="stitch-count">14 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 8</div><div class="step-content"><div class="stitch-line">[6sc, inc] x 2, ch1 y gira <span class="stitch-count">16 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 9</div><div class="step-content"><div class="stitch-line">[7sc, inc] x 2, ch1 y gira <span class="stitch-count">18 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 10</div><div class="step-content"><div class="stitch-line">18sc, ch1 y gira <span class="stitch-count">18 pts</span></div></div></div>
+
+    <div class="note-box">
+      <div class="box-title">✂️ Terminar el Cape Top</div>
+      Remata dejando una punta corta. No cortes todavía si vas a continuar con el Cape Bottom de inmediato.
+    </div>
+  </div>
+
+  <!-- ==================== PIEZA 9: CAPE BOTTOM ==================== -->
+  <div class="piece-header">
+    <div class="piece-number">Pieza 9 de 9</div>
+    <h2>🔴 Parte Inferior de la Capa (Cape Bottom)</h2>
+    <div class="subtitle">Con Color C — Borgoña · Se engancha al Cape Top</div>
+  </div>
+  <div class="piece-body">
+    <div class="intro-p">
+      El Cape Bottom es la parte grande de la capa. Se engancha directamente a la cadena de inicio del Cape Top con un slst, y luego se teje hacia abajo en filas que van aumentando para crear el efecto de capa acampanada. La última fila rodea todo el borde de la capa.
+    </div>
+
+    <div class="special-box">
+      <div class="box-title">⚙️ Cómo empezar el Cape Bottom</div>
+      Con Color C, engancha el hilo a la cadena de inicio del Cape Top (la ch7 original) con un slst. Empieza la Fila 1 desde ahí.
+    </div>
+
+    <div class="step"><div class="step-label">Fila 1</div><div class="step-content"><div class="stitch-line">ch1, [2sc, inc] x 2, ch1 y gira <span class="stitch-count">8 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 2</div><div class="step-content"><div class="stitch-line">[3sc, inc] x 2, ch1 y gira <span class="stitch-count">10 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 3</div><div class="step-content"><div class="stitch-line">10sc, ch1 y gira <span class="stitch-count">10 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 4</div><div class="step-content"><div class="stitch-line">[4sc, inc] x 2, ch1 y gira <span class="stitch-count">12 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 5</div><div class="step-content"><div class="stitch-line">[5sc, inc] x 2, ch1 y gira <span class="stitch-count">14 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Filas 6–7</div><div class="step-content"><div class="stitch-line">14sc, ch1 y gira <span class="stitch-count">14 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 8</div><div class="step-content"><div class="stitch-line">[6sc, inc] x 2, ch1 y gira <span class="stitch-count">16 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Filas 9–10</div><div class="step-content"><div class="stitch-line">16sc, ch1 y gira <span class="stitch-count">16 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 11</div><div class="step-content"><div class="stitch-line">[7sc, inc] x 2, ch1 y gira <span class="stitch-count">18 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Filas 12–13</div><div class="step-content"><div class="stitch-line">18sc, ch1 y gira <span class="stitch-count">18 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 14</div><div class="step-content"><div class="stitch-line">[8sc, inc] x 2, ch1 y gira <span class="stitch-count">20 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Filas 15–16</div><div class="step-content"><div class="stitch-line">20sc, ch1 y gira <span class="stitch-count">20 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 17</div><div class="step-content"><div class="stitch-line">[9sc, inc] x 2, ch1 y gira <span class="stitch-count">22 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Filas 18–19</div><div class="step-content"><div class="stitch-line">22sc, ch1 y gira <span class="stitch-count">22 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 20</div><div class="step-content"><div class="stitch-line">[10sc, inc] x 2, ch1 y gira <span class="stitch-count">24 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Filas 21–22</div><div class="step-content"><div class="stitch-line">24sc, ch1 y gira <span class="stitch-count">24 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 23</div><div class="step-content"><div class="stitch-line">[11sc, inc] x 2, ch1 y gira <span class="stitch-count">26 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 24</div><div class="step-content"><div class="stitch-line">26sc, ch1 y gira <span class="stitch-count">26 pts</span></div></div></div>
+    <div class="step"><div class="step-label">Fila 25</div><div class="step-content">
+      <div class="stitch-line">26sc, ch1 y NO gires <span class="stitch-count">26 pts</span></div>
+      <div class="explanation">Esta es la última fila antes del borde. No gires — ahora vas a rodear todo el borde de la capa.</div>
+    </div></div>
+
+    <div class="step"><div class="step-label">Fila 26</div><div class="step-content">
+      <div class="stitch-line">sc ~32 puntos subiendo por un lado de la capa. inc, 16sc, inc a través de la parte superior. sc ~32 puntos bajando por el otro lado. slst en el sc inicial de la Fila 25. Remata. <span class="stitch-count">~82 pts aprox.</span></div>
+      <div class="explanation">Esta fila bordea TODA la capa: subes por el lado izquierdo (~32sc), tejes el borde superior con inc al inicio y al final más 16sc en el medio, luego bajas por el lado derecho (~32sc), y terminas con slst. El número de sc en los lados es aproximado — lo que importa es que el borde quede parejo. Inserta en las cabeceras de fila a intervalos regulares.</div>
+    </div></div>
+
+    <div class="tip-box">
+      <div class="box-title">💡 Cómo debe verse la capa terminada</div>
+      Dos piezas unidas: el Cape Top es pequeño y cuadrado (irá en la espalda de la cabeza), el Cape Bottom es grande y triangular (cuelga como una capa dramática). Juntos forman la capa característica borgoña del Mind Flayer.
+    </div>
+  </div>
+
+  <!-- ==================== ARMADO ==================== -->
+  <div class="piece-header" style="margin-top:48px;">
+    <div class="piece-number">Paso Final</div>
+    <h2>🪡 Armado (Assembly)</h2>
+    <div class="subtitle">Cómo unir todas las piezas</div>
+  </div>
+  <div class="piece-body">
+
+    <div class="tip-box">
+      <div class="box-title">💡 Consejo antes de empezar</div>
+      Siempre fija cada pieza con alfileres y mírala desde varios ángulos antes de coser. El armado es lo que hace que el Mind Flayer tenga su postura característica — erguido, con los brazos abiertos y la capa cayendo dramáticamente.
+    </div>
+
+    <div class="assembly-step">
+      <div class="assembly-number">1</div>
+      <div class="assembly-content">
+        <strong>Cose los brazos al cuerpo.</strong> Fíjalos entre las Vueltas 3 y 6 del Body Base, inclinados ligeramente hacia adelante. Los brazos deben quedar extendidos a los lados con las manos abiertas hacia afuera — la pose característica del Mind Flayer listo para atacar.
+      </div>
+    </div>
+
+    <div class="assembly-step">
+      <div class="assembly-number">2</div>
+      <div class="assembly-content">
+        <strong>Coloca la armadura de pecho y hombros.</strong> Fija con alfileres la armadura alrededor del pecho y los brazos. El punto central de la "W" debe quedar entre las Vueltas 3 y 6 del Body, y los puntos laterales van encima de los brazos. Conecta los extremos del inicio y final (las filas de 2sc) para formar el loop que rodea todo. Luego cose en su lugar.
+      </div>
+    </div>
+
+    <div class="assembly-step">
+      <div class="assembly-number">3</div>
+      <div class="assembly-content">
+        <strong>Une la cabeza al cuerpo.</strong> Encaja la cabeza en la apertura superior del cuerpo. La cabeza va ligeramente inclinada y se une entre las Vueltas 2 y 4 de la propia cabeza (es decir, la parte inferior de la cabeza entra un poco dentro del cuerpo). Cose firmemente alrededor.
+      </div>
+    </div>
+
+    <div class="assembly-step">
+      <div class="assembly-number">4</div>
+      <div class="assembly-content">
+        <strong>Cose la capa.</strong> Centra el Cape Top en la espalda de la cabeza y fíjalo entre las Filas 2 y 4 del Cape Top y las Vueltas 11 y 14 de la cabeza. La sección donde el Cape Top y el Cape Bottom están unidos va en la base del cuello (donde la cabeza se conecta con el cuerpo). Cose todo en su lugar — la capa debe caer dramáticamente por la espalda.
+      </div>
+    </div>
+
+    <div class="note-box" style="margin-top:22px;">
+      <div class="box-title">🦑 ¡Felicidades — tu Mind Flayer está listo!</div>
+      Con la capa borgoña, los tentáculos enroscados, la armadura gris y la mirada intimidante, tu Mind Flayer está listo para acechar los planos astrales. ¡Tu mamá hizo un trabajo increíble!
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>
